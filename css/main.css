@@ -1,0 +1,215 @@
+/*------
+Base styles
+---------*/
+body
+{
+  margin: 0;
+  padding: 0;
+  color: #3B72AA;
+  background-color: #F6D8E0;
+  font: 1em/1.2 "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+
+
+}
+
+h1, h2, h3, h4
+{
+
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+p {
+
+}
+
+a:link {
+
+}
+
+a:visited {
+
+}
+
+a:focus {
+
+}
+
+a:hover {
+
+}
+
+a:active{
+
+}
+
+/*---------
+Layout syles
+----------*/
+
+.container {
+  max-width: 50em;
+  margin: auto;
+}
+.green {
+  background-color: #A9DBE6;
+}
+
+.white {
+  background-color: #fff;
+}
+.nav-bar {
+  color: #fff;
+  background-color: #3B72AA;
+  padding: 0;
+}
+
+.content {
+  padding: 1em 1.25em;
+  background-color: #F6D8E0;
+}
+
+.footer {
+  color: #fff;
+  background-color: #3B72AA;
+  padding: 1em 1.25em;
+  text-align: center;
+}
+.right {
+  float: right;
+}
+
+.left {
+  float:left;
+}
+
+.center {
+  margin:auto;
+}
+
+.vcenter {
+  vertical-align: middle;
+}
+
+.tcenter {
+  text-align: center;
+}
+
+
+/* --------------------
+Nav-bar
+-----------------------*/
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav li {
+  display: inline;
+  margin: 0;
+}
+
+.nav a {
+  display:inline-block;
+  padding: .7em 1.25em;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid gray;
+}
+
+.nav a:link {
+
+}
+
+.nav a:visited {
+
+}
+
+.nav a:focus{
+
+}
+
+.nav a:hover {
+
+}
+
+.nav a:active {
+
+}
+
+/* --------------------
+Single styles
+-----------------------*/
+.img-responsive { max-width: 100%; }
+
+.btn{
+  color: #fff;
+  background: #3B72AA;
+  border-color: #222;
+  display: inline-block;
+
+  padding: .5em 1em;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-heigh: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: .2em;
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #A9DBE6;
+
+}
+
+.btn:focus {
+
+}
+
+.btn:active {
+
+}
+
+.imgSize280 {
+
+        width: 50em;
+        border: 0.125em solid white;
+        box-shadow: 0em 0.125em 0.25em rgba(205, 205, 205, 0.7);
+        -moz-box-shadow: 0em 0.125em 0.25em rgba(205, 205, 205, 0.7);
+        -webkit-box-shadow: 0em 0.125em 0.25em rgba(205, 205, 205, 0.7);
+}
+
+
+
+/* --------------------
+Wide styles
+-----------------------*/
+@media (min-width: 42em) {
+  .header {padding: 1.5em 3em;}
+  .nav-bar {padding: 1em 3em;}
+  .content {padding: 2em 3em;}
+  .footer {padding: 2em 3em;}
+
+  .nav li{
+    dispaly: inline;
+    margin: 0 1em 0 0;
+  }
+
+  .nav a{
+    display: inline;
+    padding: 0;
+    border-bottom: 0;
+  }
+}
