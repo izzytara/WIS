@@ -5,8 +5,8 @@ body
 {
   margin: 0;
   padding: 0;
-  color: #3B72AA;
-  background-color: #F6D8E0;
+  color: #7CDBD5;
+  background-color: #7CDBD5;
   font: 1em/1.2 "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
 
 
@@ -14,6 +14,7 @@ body
 
 h1, h2, h3, h4
 {
+  color:#2D6662;
 
 }
 
@@ -65,19 +66,27 @@ Layout syles
   background-color: #fff;
 }
 .nav-bar {
-  color: #fff;
-  background-color: #3B72AA;
+  color: #888F91;
+  background-color: #F0FBFA;
   padding: 0;
+  position: fixed;
+  /*------------------------------
+  *here to control nav fixed at the top
+  *or use js to achieve this ?????
+  ---------------------------------*/
+  top: 0;
+  width: 100%;
 }
 
 .content {
   padding: 1em 1.25em;
-  background-color: #F6D8E0;
+  background-color: #7CDBD5;
+  margin-top: 4em;
 }
 
 .footer {
-  color: #fff;
-  background-color: #3B72AA;
+  color: #888F91;
+  background-color: #F0FBFA;
   padding: 1em 1.25em;
   text-align: center;
 }
@@ -119,7 +128,7 @@ Nav-bar
 .nav a {
   display:inline-block;
   padding: .7em 1.25em;
-  color: #fff;
+  color: #888F91;
   text-decoration: none;
   border-bottom: 1px solid gray;
 }
@@ -145,13 +154,31 @@ Nav-bar
 }
 
 /* --------------------
+Login form styles
+-----------------------*/
+form {
+  border: .25em solid #f1f1f1;
+  padding: .7em 1.25em;
+}
+
+input[type=text],input[type=password]{
+  width: 100%;
+  padding: .5em 1em;
+  margin: .25em 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+
+}
+
+/* --------------------
 Single styles
 -----------------------*/
 .img-responsive { max-width: 100%; }
 
 .btn{
-  color: #fff;
-  background: #3B72AA;
+  color: #F0FBFA;
+  background: #F9BE02;
   border-color: #222;
   display: inline-block;
 
