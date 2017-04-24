@@ -4,15 +4,15 @@
     if(isset($_POST["login"])){
         if(!isset($_POST["login"])){
             exit("ERROR");
-        }                               //Judfe submit option 
-        include('Connect.php');         //Connect DB
+        }                                   //Judfe submit option 
+        include('Connect.php');             //Connect DB
         $name = $_POST['username'];         //Get username
-        $password = $_POST['password']; //Get passport
+        $password = $_POST['password'];     //Get passport
         $salt = INFS;
         $hash_password = hash('sha256', $salt.$password);
-        if ($name && $password){        //If username and password both value
+        if ($name && $password){        //check username and password both not null
             $sql = "select * from travel_user where uname = '$name' and hash_password ='$hash_password'";  //Check username and password in sql DB
-            $result = mysql_query($sql);                                                    //Run sql
+            $result = mysql_query($sql);                                                      //Run sql
             $rows = mysql_num_rows($result);                                                  //Return result
             if($rows){//0 false 1 true
                 session_start();
@@ -25,7 +25,7 @@
                 echo "<script>alert('Wrong username or password！'); history.go(-1);</script>";                                     
             }      
         }
-        else{                                              //If username or passward is empty
+        else{                //If username or passward is empty
             echo "<script>alert('You must provide your username and password！'); history.go(-1);</script>";     
         }
         mysql_close();      //Close DB
@@ -34,12 +34,12 @@
     else if (isset($_POST['signup'])){
         if(!isset($_POST['signup'])){
             exit("ERROR");
-        }                                     //Judfe submit option
+        }                                         //Judfe submit option
         $name=$_POST['username'];                 //Get signup username
-        $password=$_POST['password'];         //Get signup password
+        $password=$_POST['password'];             //Get signup password
         $salt = INFS;
         $hash_password = hash('sha256', $salt.$password);
-        include('Connect.php');               //connect to DB
+        include('Connect.php');                   //connect to DB
         $sql_check = "select uname from travel_user where uname = '$_POST[name]'";  
         $result2 = mysql_query($sql_check);    
         $num = mysql_num_rows($result2);  
@@ -52,13 +52,13 @@
             } 
             else{
                 $q="insert into travel_user(uid,uname,salt,hash_password) values (null,'$name','$salt','$hash_password')";// Add value into DB
-                $reslut=mysql_query($q,$connect);         //Run ql
+                $reslut=mysql_query($q,$connect);     //Run ql
                 if (!$reslut){
                     die('Error: ' . mysql_error());   //If run error_log(message)
                 }else{
                     echo "<script>alert('Signup Success!'); history.go(-1);</script>";
                 }
-                mysql_close($con);                        //Close DB
+                mysql_close($con);                    //Close DB
             }
         } 
     }
