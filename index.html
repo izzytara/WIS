@@ -22,82 +22,112 @@
 	<body>
 
     <!--Here is the navigation-->
-    <div class="nav-bar">
-      <div class="container">
-        <ul class="nav">
-          <li class="left"><a href="#">Explore</a></li>
-          <li class="left"><a href="#">My travel</a></li>
-          <li class="left"><a href="#">APP</a></li>
-          <li class="left"><a href="#">About us</a></li>
-          <li class="left"><a href="index.html">Logo</a></li>
-          <li class="right"><a href="#"><span class="glyphicon glyphicon-globe"></span></a></li>
-          <li class="right"><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+        <div class="nav-bar">
+            <div class="container">
+                <ul class="nav">
+                    <li class="left"><a href="#">Explore</a></li>
+                    <li class="left"><a href="#">My travel</a></li>
+                    <li class="left"><a href="#">APP</a></li>
+                    <li class="left"><a href="#">About us</a></li>
+                    <li class="left"><a href="index.html">Logo</a></li>
+                    <li class="right"><a href="#"><span class="glyphicon glyphicon-globe"></span></a></li>
+                    <li class="right"><a href="#" onclick="document.getElementById('userlogin').style.display='block'"><span class="glyphicon glyphicon-user"></span></a></li>
+                </ul>
+            </div>
+        </div>
+        
+    <!--Here is the login form-->
+        <div id="userlogin" class="modal">
+            <div class="login">
+                <form class="modal-content animate" action="#">
+                    <h2 class="tcenter">Login</h2>
+                    <div class="imgcontainer">
+                    </div>
 
-        </ul>
-        <!--<a href="#"><span class="glyphicons glyphicons-user"></span></a>
-        <a href="#"><span class="glyphicons glyphicons-globe-af"></span></a>-->
-      </div>
-    </div>
+                    <div class="container">
+                        <label><b>Username</b></label>
+                        <br>
+                        <input type="text" placeholder="Enter username" name="username" required>
+                        <br>
+                        <label><b>Password</b></label>
+                        <br>
+                        <input type="password" placeholder="Enter password" name="password" required>
+                        <br>
+                        <p class="tcenter"><a href="#" class="btn" type="submit">Login</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="#" class="btn" type="submit">Sign up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
 
     <!--Here is the content-->
-    <div class="content">
-      <div class="container">
-          <!-- Swiper -->
-          <div class="swiper-container">
-              <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img class="img-responsive" class="imgSize280" src="img/test2.jpg" alt="test1"/></div>
-                  <div class="swiper-slide"><img class="img-responsive" class="imgSize280" src="img/placeholder.gif" alt="test1"/></div>
-                  <div class="swiper-slide"><img class="img-responsive" class="imgSize280" src="img/placeholder.gif" alt="test1"/></div>
-                  <div class="swiper-slide"><p class="tcenter">Coming soon!</p></div>
-              </div>
-              <!-- Add Pagination -->
-              <div class="swiper-pagination"></div>
-              <!-- Add Arrows -->
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-          </div>
-          <!--buttons-->
-          <p class="tcenter"><a href="#" class="btn"><span class="glyphicon glyphicon-edit"></span>&nbsp Start</a></p>
-        </div>
+        <div class="content">
+            <div class="container">
+    <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img class="img-responsive" class="imgSize280" src="img/placeholder.gif" alt="test1"/></div>
+                        <div class="swiper-slide"><img class="img-responsive" class="imgSize280" src="img/placeholder.gif" alt="test1"/></div>
+                        <div class="swiper-slide"><img class="img-responsive" class="imgSize280" src="img/placeholder.gif" alt="test1"/></div>
+                        <div class="swiper-slide"><p class="tcenter">Coming soon!</p></div>
+                    </div>
+    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+            </div>
+    <!--buttons-->
+                <p class="tcenter"><a href="#" class="btn"><span class="glyphicon glyphicon-edit"></span>&nbsp Start</a>
+                </p>
+            </div>
 
-        <!--Here is the first display container-->
-        <div class="container">
-          <p>
-            <img class="img-responsive" class="imgSize280"src="img/placeholder.gif" alt="placeholder"/>
-          </p>
-          <!--buttons-->
-          <p class="tcenter"><a href="#" class="btn"><span class="glyphicon glyphicon-edit"></span>&nbsp Start</a></p>
+    <!--Here is the first display container-->
+            <div class="container">
+                <p>
+                    <img class="img-responsive" class="imgSize280"src="img/placeholder.gif" alt="placeholder"/>
+                </p>
+        <!--buttons-->
+                <p class="tcenter"><a href="#" class="btn"><span class="glyphicon glyphicon-edit"></span>&nbsp Start</a></p>
+            </div>
+    
+    <!--Here is the second display container-->
+            <div class="container">
+                <p>
+                    <img class="img-responsive" class="imgSize280"src="img/placeholder.gif" alt="placeholder"/>
+                </p>
+        <!--buttons-->
+                <p class="tcenter"><a href="#" class="btn"><span class="glyphicon glyphicon-edit"></span>&nbsp Start</a></p>
+            </div>
         </div>
-
-
-        <!--Here is the second display container-->
-        <div class="container">
-            <p>
-            <img class="img-responsive" class="imgSize280"src="img/placeholder.gif" alt="placeholder"/>
-            </p>
-            <!--buttons-->
-            <p class="tcenter"><a href="#" class="btn"><span class="glyphicon glyphicon-edit"></span>&nbsp Start</a></p>
-        </div>
-    </div>
 
   	<!--Here is the footer-->
-    <div class="footer">
-      <div class="container">
-        &copy; Copyright 2017
-      </div>
-    </div>
+        <div class="footer">
+            <div class="container">
+                &copy; Copyright 2017
+            </div>
+        </div>
 
     <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        slidesPerView: 1,
-        paginationClickable: true,
-        spaceBetween: 30,
-        loop: true
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            slidesPerView: 1,
+            paginationClickable: true,
+            spaceBetween: 30,
+            loop: true
         });
+    </script>
+        
+    <script>
+    //get the modal
+        var modal = document.getElementById('userlogin');
+    //when the user clicks anywhere out side the modal, close it
+        window.onclick = function(event){
+            if (event.target == modal){
+            modal.style.display = "none";
+        }
+    }
     </script>
 
 	</body>
