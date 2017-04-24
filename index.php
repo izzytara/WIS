@@ -15,7 +15,7 @@
     <!-- Link Bootstrap's js -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Link Siper's js-->
-    <script src="js/swiper.js"></script>
+    <script src="JS/swiper.js"></script>
 	</head>
 
 	<!--Here is the body-->
