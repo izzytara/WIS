@@ -53,8 +53,7 @@
                         <br>
                         <input type="password" placeholder="Enter password" name="password" required>
                         <br>
-                        <p class="tcenter"><a class="btn" name="login" type="submit">Login</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a class="btn" type="submit" name="signup">Sign up</a></p>
-                        <button type="submit" name="signup">Sign up</button><button type="submit" name="login">Log in</button>
+                        <p class="tcenter"><button class="btn" type="submit" name="signup">Sign up</button>&nbsp&nbsp&nbsp&nbsp&nbsp<button class="btn" type="submit" name="login">Log in</button></p>s
                     </div>
                 </form>
             </div>
