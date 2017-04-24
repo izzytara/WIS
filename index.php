@@ -39,7 +39,7 @@
     <!--Here is the login form-->
         <div id="userlogin" class="modal">
             <div class="login">
-                <form class="modal-content animate" action="#">
+                <form class="modal-content animate" action="login.php" method="post">
                     <h2 class="tcenter">Login</h2>
                     <div class="imgcontainer">
                     </div>
@@ -53,7 +53,8 @@
                         <br>
                         <input type="password" placeholder="Enter password" name="password" required>
                         <br>
-                        <p class="tcenter"><a href="#" class="btn" type="submit">Login</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="#" class="btn" type="submit">Sign up</a></p>
+                        <p class="tcenter"><a class="btn" name="login" type="submit">Login</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a class="btn" type="submit" name="signup">Sign up</a></p>
+                        <button type="submit" name="signup">Sign up</button><button type="submit" name="login">Log in</button>
                     </div>
                 </form>
             </div>
