@@ -32,13 +32,29 @@
                     <li class="left"><a href="index.html">Logo</a></li>
                     <li class="right"><a href="#"><span class="glyphicon glyphicon-globe"></span></a></li>
                     <li class="right">
+                    <div class="dropdown">
+                        <?php
+                            session_start();
+                            if(!$_SESSION['auth']){
+                        ?>
                         <div class="dropdown">
                             <a href="#" class="dropbtn" onclick="document.getElementById('userlogin').style.display='block'"><span class="glyphicon glyphicon-user"></span></a>
+                        </div>
+                        <?php
+                            }else if($_SESSION['auth']){
+                        ?>     
+                            <div class="dropdown">
+                            <a href="#" class="dropbtn"><span class="glyphicon glyphicon-user"></span></a>
+                            </div>           
                             <div class="dropdown-content">
-                                <a href="#" onclick="document.getElementById('userlogin').style.display='block'">Login</a>
-                                <a href="#">Logout</a>
+                            <form method="post" action="logout.php">
+                            <button type="submit" name="logout">Logout</button>
+                            </form>
                             </div>
-                        </div>                      
+                        <?php
+                            }
+                        ?> 
+                    </div>                    
                     </li>
                 </ul>
             </div>
