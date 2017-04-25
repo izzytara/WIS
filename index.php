@@ -33,6 +33,7 @@
                     <li class="right"><a href="#"><span class="glyphicon glyphicon-globe"></span></a></li>
                     <li class="right">
                     <div class="dropdown">
+                        <!--If user has not loged in-->
                         <?php
                             session_start();
                             if(!$_SESSION['auth']){
@@ -40,6 +41,8 @@
                         <div class="dropdown">
                             <a href="#" class="dropbtn" onclick="document.getElementById('userlogin').style.display='block'"><span class="glyphicon glyphicon-user"></span></a>
                         </div>
+                        
+                        <!--If user has not loged in-->
                         <?php
                             }else if($_SESSION['auth']){
                         ?>     
