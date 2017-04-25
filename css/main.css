@@ -1,21 +1,15 @@
 /*------
 Base styles
 ---------*/
-body
-{
-  margin: 0;
-  padding: 0;
-  color: #7CDBD5;
-  background-color: #7CDBD5;
-  font: 1em/1.2 "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
-
-
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #b8d6e7;
+    font: 1em/1.2 "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
 }
 
-h1, h2, h3, h4
-{
-  color:#2D6662;
-
+h1, h2, h3, h4 {
+    color:#2D6662;
 }
 
 h1 {
@@ -23,7 +17,7 @@ h1 {
 }
 
 h2 {
-
+    
 }
 
 p {
@@ -55,55 +49,57 @@ Layout syles
 ----------*/
 
 .container {
-  max-width: 50em;
-  margin: auto;
+    max-width: 70em;
+    max-height: 50em;
+    margin: auto;
 }
 .green {
-  background-color: #A9DBE6;
+    background-color: #01b6c6;
 }
 
 .white {
-  background-color: #fff;
+    background-color: white;
 }
 .nav-bar {
-  color: #888F91;
-  background-color: #F0FBFA;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
+    color: #888F91;
+    background-color: #fff;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
 }
 
 .content {
-  padding: 1em 1.25em;
-  background-color: #7CDBD5;
-  margin-top: 4em;
+    padding: 1em 1.25em;
+    background-color: #b8d6e7;
+    margin-top: 5em;
 }
 
 .footer {
-  color: #888F91;
-  background-color: #F0FBFA;
-  padding: 1em 1.25em;
-  text-align: center;
+    color: #888F91;
+    background-color: #fff;
+    padding: 1em 1.25em;
+    text-align: center;
 }
 .right {
-  float: right;
+    float: right;
 }
 
 .left {
-  float:left;
+    float:left;
 }
 
 .center {
-  margin:auto;
+    margin:auto;
 }
 
 .vcenter {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
 .tcenter {
-  text-align: center;
+    text-align: center;
 }
 
 
@@ -111,22 +107,22 @@ Layout syles
 Nav-bar
 -----------------------*/
 .nav {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .nav li {
-  display: inline;
-  margin: 0;
+    display: inline;
+    margin: 0;
 }
 
 .nav a {
-  display:inline-block;
-  padding: .7em 1.25em;
-  color: #888F91;
-  text-decoration: none;
-  border-bottom: 1px solid gray;
+    display:inline-block;
+    padding: .7em 1.25em;
+    color: #888F91;
+    text-decoration: none;
+    border-bottom: 1px solid gray;
 }
 
 .nav a:link {
@@ -150,20 +146,58 @@ Nav-bar
 }
 
 /* --------------------
+Dropdown
+-----------------------*/
+/* Dropdown Button */
+
+
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: .75em 1.25em;
+    box-shadow: 0 .5em 1em 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: .75em 1.5em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.dropdown-content a:hover {
+    
+}
+
+.dropdown:hover .dropdown-content {
+    display: inline-block;
+}
+
+.dropdown:hover .dropbtn {
+    
+}
+
+
+/* --------------------
 Login form styles
 -----------------------*/
 form {
-  border: .25em solid #f1f1f1;
-  padding: .7em 1.25em;
+    border: .25em solid #f1f1f1;
+    padding: .7em 1.25em;
 }
 
 input[type=text],input[type=password]{
-  width: 75%;
-  padding: .5em 1em;
-  margin: .25em .1em;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+    width: 75%;
+    padding: .5em 1em;
+    margin: .25em .1em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 
 }
 
@@ -222,28 +256,30 @@ input[type=text],input[type=password]{
 Single styles
 -----------------------*/
 .img-responsive { max-width: 100%; }
-
+/* --------------------
+Button styles
+-----------------------*/
 .btn{
-  color: #F0FBFA;
-  background: #F9BE02;
-  border-color: #222;
-  display: inline-block;
-  padding: .5em 1em;
-  margin-bottom: 0;
-  font-weight: 400;
-  line-height: 1.2;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  border: 1px solid transparent;
-  border-radius: .2em;
-  text-decoration: none;
+    color: #F0FBFA;
+    background: #F9BE02;
+    border-color: #222;
+    display: inline-block;
+    padding: .5em 1em;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: .2em;
+    text-decoration: none;
 }
 
 .btn:hover {
-  color: #fff;
-  background-color: #A9DBE6;
+    color: #fff;
+    background-color: #A9DBE6;
 
 }
 
@@ -254,15 +290,20 @@ Single styles
 .btn:active {
 
 }
-
+/* --------------------
+Image styles
+-----------------------*/
+img {
+    text-align: center;
+}
 .imgcontainer {
     text-align: center;
     position: relative;
 }
 
 .imgSize280 {
-
-        width: 50em;
+        text-align: center;
+        width: 70em;
         border: 0.125em solid white;
         box-shadow: 0em 0.125em 0.25em rgba(205, 205, 205, 0.7);
         -moz-box-shadow: 0em 0.125em 0.25em rgba(205, 205, 205, 0.7);
@@ -275,20 +316,20 @@ Single styles
 Wide styles
 -----------------------*/
 @media (min-width: 42em) {
-  .header {padding: 1.5em 3em;}
-  .nav-bar {padding: 1em 3em;}
-  .content {padding: 2em 3em;}
-  .footer {padding: 2em 3em;}
+    .header {padding: 1.5em 3em;}
+    .nav-bar {padding: 1em 3em;}
+    .content {padding: 2em 3em;}
+    .footer {padding: 2em 3em;}
 
   .nav li{
-    display: inline;
-    margin: 0 1em 0 0;
+      display: inline;
+      margin: 0 1em 0 0;
   }
 
   .nav a{
-    display: inline;
-    padding: 0;
-    border-bottom: 0;
+      display: inline;
+      padding: 0;
+      border-bottom: 0;
   }
 
 }

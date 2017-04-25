@@ -25,13 +25,21 @@
         <div class="nav-bar">
             <div class="container">
                 <ul class="nav">
-                    <li class="left"><a href="#">Explore</a></li>
+                    <li class="left"><a href="#explore">Explore</a></li>
                     <li class="left"><a href="#">My travel</a></li>
-                    <li class="left"><a href="#">APP</a></li>
-                    <li class="left"><a href="#">About us</a></li>
+                    <li class="left"><a href="#app">APP</a></li>
+                    <li class="left"><a href="#aboutus">About us</a></li>
                     <li class="left"><a href="index.html">Logo</a></li>
                     <li class="right"><a href="#"><span class="glyphicon glyphicon-globe"></span></a></li>
-                    <li class="right"><a href="#" onclick="document.getElementById('userlogin').style.display='block'"><span class="glyphicon glyphicon-user"></span></a></li>
+                    <li class="right">
+                        <div class="dropdown">
+                            <a href="#" class="dropbtn" onclick="document.getElementById('userlogin').style.display='block'"><span class="glyphicon glyphicon-user"></span></a>
+                            <div class="dropdown-content">
+                                <a href="#" onclick="document.getElementById('userlogin').style.display='block'">Login</a>
+                                <a href="#">Logout</a>
+                            </div>
+                        </div>                      
+                    </li>
                 </ul>
             </div>
         </div>
@@ -81,21 +89,30 @@
             </div>
 
     <!--Here is the first display container-->
-            <div class="container">
+            <div class="container green">
                 <p>
-                    <img class="img-responsive" class="imgSize280"src="img/placeholder.gif" alt="placeholder"/>
+                    <img class="img-responsive" src="img/placeholder.gif" alt="placeholder"/>
                 </p>
-        <!--buttons-->
-                <p class="tcenter"><a href="#" class="btn"><span class="glyphicon glyphicon-edit"></span>&nbsp Start</a></p>
             </div>
     
     <!--Here is the second display container-->
-            <div class="container">
+            <div id="explore" class="container white">
+                <h2>Explore</h2>
                 <p>
-                    <img class="img-responsive" class="imgSize280"src="img/placeholder.gif" alt="placeholder"/>
+                    <img class="img-responsive" src="img/placeholder.gif" alt="placeholder"/>
                 </p>
-        <!--buttons-->
-                <p class="tcenter"><a href="#" class="btn"><span class="glyphicon glyphicon-edit"></span>&nbsp Start</a></p>
+            </div>
+    <!--Here is the third display container-->
+            <div id="app" class="container green center">
+                <h2>APP</h2>
+                <p class="tcenter">
+                    <img class="img-responsive" src="img/placeholder.gif" alt="placeholder"/>
+                </p>
+            </div>
+    
+    <!--Here is the fourth display container-->
+            <div id="aboutus" class="container white">
+                <h2>About US</h2>
             </div>
         </div>
 
