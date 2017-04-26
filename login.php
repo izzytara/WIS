@@ -8,8 +8,8 @@
         $salt = INFS;
         $hash_password = hash('sha256', $salt.$password);//Password hash function
         $stmt = $connect->prepare("SELECT * FROM travel_user WHERE uname = '$name'");//prepare sql
-        $stmt->bind_param("s", $name);//Test name & password are string
-        $stmt->execute();//Check safty
+        $stmt->bind_param("s", $name);//Test name are string
+        $stmt->execute();//Check safty by sql prepare
         $safety_result = $stmt->get_result();
         $safety_row = $safety_result->fetch_assoc();
         if ($safety_row){//If safety
@@ -53,15 +53,16 @@
                 echo "<script>alert('Please provide username and password！'); history.go(-1);</script>";  
             } 
             else{
-
-                $q="INSERT INTO travel_user(uname,salt,hash_password) VALUES ('$name','$salt','$hash_password')";
-                $reslut3 = mysqli_query($connect, $q);
-                if($reslut3){
-                    echo "<script>alert('Signup Success! Please Login'); history.go(-1);</script>";
-                    mysqli_close($connect);//Close DB 
-                }else if (!$reslut3){
-                    echo "<script>alert('Signup Error!'); history.go(-1);</script>";
-                }
+                
+                
+                    $q="INSERT INTO travel_user(uname,salt,hash_password) VALUES ('$name','$salt','$hash_password')";
+                    $reslut3 = mysqli_query($connect, $q);
+                    if ($reslut3){
+                        echo "<script>alert('Signup Success! Please Login'); history.go(-1);</script>";
+                        mysqli_close($connect);//Close DB 
+                    }else if (!$reslut3){
+                        echo "<script>alert('Signup Error!'); history.go(-1);</script>";
+                    }
 
             }
         }
