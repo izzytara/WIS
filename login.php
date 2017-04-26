@@ -54,7 +54,6 @@
             } 
             else{
 
-
                 $q="INSERT INTO travel_user(uname,salt,hash_password) VALUES ('$name','$salt','$hash_password')";
                 $reslut3 = mysqli_query($connect, $q);
                 if($reslut3){
@@ -63,7 +62,6 @@
                 }else if (!$reslut3){
                     echo "<script>alert('Signup Error!'); history.go(-1);</script>";
                 }
-
 
             }
         }
