@@ -7,8 +7,8 @@
         $password = $_POST['password'];     
         $salt = INFS;
         $hash_password = hash('sha256', $salt.$password);//Password hash function
-        $stmt = $connect->prepare("SELECT * FROM travel_user WHERE uname = '$name' AND hash_password ='$hash_password'");//prepare sql
-        $stmt->bind_param("ss", $name, $password);//Test name & password are string
+        $stmt = $connect->prepare("SELECT * FROM travel_user WHERE uname = '$name'");//prepare sql
+        $stmt->bind_param("s", $name);//Test name & password are string
         $stmt->execute();//Check safty
         $safety_result = $stmt->get_result();
         $safety_row = $safety_result->fetch_assoc();
@@ -23,7 +23,7 @@
                     $_SESSION['auth'] = true;
                     echo "<script>alert('Log in success！');history.go(-1);</script>"; 
                 }
-                else{//If username or passward is wrong
+                else if(!$rows1){//If username or passward is wrong
                     echo "<script>alert('Wrong username or password！'); history.go(-1);</script>";                                     
                 }      
             }
