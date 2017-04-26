@@ -1,5 +1,6 @@
 <?php
     header("Content-Type: text/html; charset=utf8");
+    $connect = new mysqli('Localhost', 'root', 'keyocijonaca', 'travel');
     #used for login
     if(isset($_POST["login"])){
         if(!isset($_POST["login"])){
@@ -12,8 +13,8 @@
         $hash_password = hash('sha256', $salt.$password);
         if ($name && $password){        //check username and password both not null
             $sql = "SELECT * FROM travel_user WHERE uname = '$name' AND hash_password ='$hash_password'";  //Check username and password in sql DB
-            $result = mysql_query($sql, $connect);                                                      //Run sql
-            $rows = mysql_num_rows($result);                                                  //Return result
+            $result = mysqli_query($connect, $sql);                                                      //Run sql
+            $rows = mysqli_num_rows($result);                                                  //Return result
             if($rows){//0 false 1 true
                 session_start();
                 $_SESSION['Username'] = "$name";
@@ -27,7 +28,7 @@
         else{                //If username or passward is empty
             echo "<script>alert('You must provide your username and password！'); history.go(-1);</script>";     
         }
-        mysql_close();      //Close DB
+        mysqli_close($connect);      //Close DB
     }
     
     #used for signup
@@ -41,8 +42,8 @@
         $hash_password = hash('sha256', $salt.$password);
         include('Connect.php');                   //connect to DB
         $sql_check = "SELECT uname FROM travel_user WHERE uname = '$name'";  
-        $result2 = mysql_query($sql_check);    
-        $num = mysql_num_rows($result2);  
+        $result2 = mysqli_query($connect, $sql_check);    
+        $num = mysqli_num_rows($result2);  
         if($num){              
             echo "<script>alert('Sorry, username has been registed, please try another username'); history.go(-1);</script>";  
         }else{
@@ -51,13 +52,13 @@
             } 
             else{
                 $q="insert into travel_user(uid,uname,salt,hash_password) values (null,'$name','$salt','$hash_password')";// Add value into DB
-                $reslut=mysql_query($q, $connect);     //Run ql
+                $reslut=mysqli_query($connect, $q);     //Run ql
                 if (!$reslut){
-                    die('Error: ' . mysql_error());   //If run error_log(message)
+                    die('Error: ' . mysqli_error());   //If run error_log(message)
                 }else{
                     echo "<script>alert('Signup Success!'); history.go(-1);</script>";
                 }
-                mysql_close();                    //Close DB
+                mysqli_close($connect);                    //Close DB
             }
         } 
     }

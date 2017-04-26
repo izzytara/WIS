@@ -5,9 +5,9 @@
     $db_password="keyocijonaca";//DB password
     $db_name = "travel";//DB name
 
-    $connect = mysql_connect($server,$db_username,$db_password,$db_name);//Connect DB
+    $connect = new mysqli($server,$db_username,$db_password,$db_name);//Connect DB
     if (!$connect) {
         die("Connection failed: " . $conn->connect_error);
     }
-    mysql_select_db('travel', $connect);
+    mysqli_select_db($connect, 'travel');
 ?>
