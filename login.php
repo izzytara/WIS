@@ -11,7 +11,7 @@
         $salt = INFS;
         $hash_password = hash('sha256', $salt.$password);
         if ($name && $password){        //check username and password both not null
-            $sql = "select * from travel_user where uname = '$name' and hash_password ='$hash_password'";  //Check username and password in sql DB
+            $sql = "SELECT * FROM travel_user WHERE uname = '$name' AND hash_password ='$hash_password'";  //Check username and password in sql DB
             $result = mysql_query($sql, $connect);                                                      //Run sql
             $rows = mysql_num_rows($result);                                                  //Return result
             if($rows){//0 false 1 true
@@ -40,7 +40,7 @@
         $salt = INFS;
         $hash_password = hash('sha256', $salt.$password);
         include('Connect.php');                   //connect to DB
-        $sql_check = "select uname from travel_user where uname = '$name'";  
+        $sql_check = "SELECT uname FROM travel_user WHERE uname = '$name'";  
         $result2 = mysql_query($sql_check);    
         $num = mysql_num_rows($result2);  
         if($num){              
