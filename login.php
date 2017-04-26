@@ -31,8 +31,6 @@
                 echo "<script>alert('You must provide your username and password！'); history.go(-1);</script>";     
             }
             mysqli_close($connect);//Close DB            
-        }else {//If not safty
-            echo "<script>alert('Please don't attact DB); history.go(-1);</script>";
         }
     }
     
