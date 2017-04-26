@@ -1,63 +1,57 @@
 <?php
     header("Content-Type: text/html; charset=utf8");
     #used for login
-    if(isset($_POST["login"])){
-        if(!isset($_POST["login"])){
-            exit("ERROR");
-        }                                   //Judfe submit option 
-        include('Connect.php');             //Connect DB
-        $name = $_POST['username'];         //Get username
-        $password = $_POST['password'];     //Get passport
+    if(isset($_POST["login"])){//Check login has been clicked
+        include('Connect.php');//Connect DB
+        $name = $_POST['username'];         
+        $password = $_POST['password'];     
         $salt = INFS;
-        $hash_password = hash('sha256', $salt.$password);
-        if ($name && $password){        //check username and password both not null
-            $sql = "SELECT * FROM travel_user WHERE uname = '$name' AND hash_password ='$hash_password'";  //Check username and password in sql DB
-            $result = mysqli_query($connect, $sql);                                                      //Run sql
-            $rows = mysqli_num_rows($result);                                                  //Return result
-            if($rows){//0 false 1 true
-                session_start();
+        $hash_password = hash('sha256', $salt.$password);//Password hash function
+        if ($name && $password){//Check username and password both not null
+            $sql = "SELECT * FROM travel_user WHERE uname = '$name' AND hash_password ='$hash_password'";//Check username and password in sql DB
+            $result1 = mysqli_query($connect, $sql);//Run sql
+            $rows1 = mysqli_num_rows($result1);//Check true or false
+            if($rows1){//If username or passward is right
+                session_start();//Set session
                 $_SESSION['Username'] = "$name";
                 $_SESSION['auth'] = true;
                 echo "<script>alert('Log in success！');history.go(-1);</script>"; 
             }
-            else{
+            else{//If username or passward is wrong
                 echo "<script>alert('Wrong username or password！'); history.go(-1);</script>";                                     
             }      
         }
-        else{                //If username or passward is empty
+        else{//If username or passward is empty
             echo "<script>alert('You must provide your username and password！'); history.go(-1);</script>";     
         }
-        mysqli_close($connect);      //Close DB
+        mysqli_close($connect);//Close DB
     }
     
     #used for signup
-    else if (isset($_POST['signup'])){
-        if(!isset($_POST['signup'])){
-            exit("ERROR");
-        }                                         //Judfe submit option
-        $name=$_POST['username'];                 //Get signup username
-        $password=$_POST['password'];             //Get signup password
+    else if (isset($_POST['signup'])){//Check signup has been clicked
+        include('Connect.php');//Connect DB
+        $name=$_POST['username'];                 
+        $password=$_POST['password'];             
         $salt = INFS;
-        $hash_password = hash('sha256', $salt.$password);
-        include('Connect.php');                   //connect to DB
+        $hash_password = hash('sha256', $salt.$password);//Password hash function                 
         $sql_check = "SELECT uname FROM travel_user WHERE uname = '$name'";  
-        $result2 = mysqli_query($connect, $sql_check);    
-        $num = mysqli_num_rows($result2);  
-        if($num){              
+        $result2 = mysqli_query($connect, $sql_check);//Run sql   
+        $rows2 = mysqli_num_rows($result2);//Chect true or false
+        if($rows2){//If username has been registed
             echo "<script>alert('Sorry, username has been registed, please try another username'); history.go(-1);</script>";  
         }else{
-            if($name == "" || $password == ""){  
+            if($name == "" || $password == ""){//If username or passward is empty   
                 echo "<script>alert('Please provide username and password！'); history.go(-1);</script>";  
             } 
             else{
-                $q="insert into travel_user(uid,uname,salt,hash_password) values (null,'$name','$salt','$hash_password')";// Add value into DB
-                $reslut=mysqli_query($connect, $q);     //Run ql
-                if (!$reslut){
-                    die('Error: ' . mysqli_error());   //If run error_log(message)
-                }else{
+                $q="INSERT INTO travel_user(uid,uname,salt,hash_password) VALUES (null,'$name','$salt','$hash_password')";
+                $reslut3=mysqli_query($connect, $q);     
+                if (!$reslut3){//If signup error
+                    die('Error: ' . mysqli_error());   
+                }else{//If signup success
                     echo "<script>alert('Signup Success!'); history.go(-1);</script>";
                 }
-                mysqli_close($connect);                    //Close DB
+                mysqli_close($connect);//Close DB
             }
         } 
     }
