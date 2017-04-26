@@ -7,6 +7,6 @@
 
     $connect = new mysqli($server,$db_username,$db_password,$db_name);//Connect DB
     if(!$connect){
-        die("can't connect".mysql_error());// Connect fail
+        die("can't connect".mysqli_error());// Connect fail
     }
 ?>
