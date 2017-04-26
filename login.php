@@ -57,7 +57,6 @@
                 $stmt->bind_param("sss", $uname, $salt, $hash_password);//Test name are string
                 $stmt->execute();//Check safty by sql prepare
                 echo "<script>alert('Signup Success! Please Login'); history.go(-1);</script>";
-
                 /*if($safety_row){
                     $q="INSERT INTO travel_user(uname,salt,hash_password) VALUES ('$uname','$salt','$hash_password')";
                     $reslut3 = mysqli_query($connect, $q);
