@@ -1,6 +1,5 @@
 <?php
     header("Content-Type: text/html; charset=utf8");
-    $connect = new mysqli('Localhost', 'root', 'keyocijonaca', 'travel');
     #used for login
     if(isset($_POST["login"])){
         if(!isset($_POST["login"])){
