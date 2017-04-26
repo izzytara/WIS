@@ -39,31 +39,35 @@
     #used for signup
     else if (isset($_POST['signup'])){//Check signup has been clicked
         include('Connect.php');//Connect DB
-        $name=$_POST['username'];                 
+        $uname=$_POST['username'];                 
         $password=$_POST['password'];             
         $salt = INFS;
         $hash_password = hash('sha256', $salt.$password);//Password hash function
-        $sql_check = "SELECT uname FROM travel_user WHERE uname = '$name'";  
+        $sql_check = "SELECT uname FROM travel_user WHERE uname = '$uname'";  
         $result2 = mysqli_query($connect, $sql_check);//Run sql   
         $rows2 = mysqli_num_rows($result2);//Chect true or false
         if ($rows2){//If username has been registed
             echo "<script>alert('Sorry, username has been registed, please try another username'); history.go(-1);</script>";  
-        }else{
-            if ($name == "" || $password == ""){//If username or passward is empty   
+        }else {
+            if ($uname == "" || $password == ""){//If username or passward is empty   
                 echo "<script>alert('Please provide username and password！'); history.go(-1);</script>";  
             } 
-            else{
-                
-                
-                    $q="INSERT INTO travel_user(uname,salt,hash_password) VALUES ('$name','$salt','$hash_password')";
+            else {
+                $stmt = $connect->prepare("INSERT INTO travel_user(uname,salt,hash_password) VALUES (?, ?, ?)");//prepare sql
+                $stmt->bind_param("sss", $uname, $salt, $hash_password);//Test name are string
+                $stmt->execute();//Check safty by sql prepare
+                echo "<script>alert('Signup Success! Please Login'); history.go(-1);</script>";
+
+                /*if($safety_row){
+                    $q="INSERT INTO travel_user(uname,salt,hash_password) VALUES ('$uname','$salt','$hash_password')";
                     $reslut3 = mysqli_query($connect, $q);
                     if ($reslut3){
                         echo "<script>alert('Signup Success! Please Login'); history.go(-1);</script>";
                         mysqli_close($connect);//Close DB 
                     }else if (!$reslut3){
                         echo "<script>alert('Signup Error!'); history.go(-1);</script>";
-                    }
-
+                    }                    
+                }*/   
             }
         }
     }
