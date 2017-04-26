@@ -31,7 +31,7 @@
                 echo "<script>alert('You must provide your username and password！'); history.go(-1);</script>";     
             }
             mysqli_close($connect);//Close DB            
-        }else if (!$safety_row1){//If not safty
+        }else {//If not safty
             echo "<script>alert('Please don't attact DB); history.go(-1);</script>";
         }
     }
@@ -53,6 +53,8 @@
                 echo "<script>alert('Please provide username and password！'); history.go(-1);</script>";  
             } 
             else{
+
+
                 $q="INSERT INTO travel_user(uname,salt,hash_password) VALUES ('$name','$salt','$hash_password')";
                 $reslut3 = mysqli_query($connect, $q);
                 if($reslut3){
@@ -60,7 +62,9 @@
                     mysqli_close($connect);//Close DB 
                 }else if (!$reslut3){
                     echo "<script>alert('Signup Error!'); history.go(-1);</script>";
-                }                                                                       
+                }
+
+
             }
         }
     }
