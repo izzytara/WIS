@@ -7,7 +7,7 @@
         $password = $_POST['password'];     
         $salt = INFS;
         $hash_password = hash('sha256', $salt.$password);//Password hash function
-        $stmt = $connect->prepare("SELECT * FROM travel_user WHERE uname = '$name'");//prepare sql
+        $stmt = $connect->prepare("SELECT * FROM travel_user WHERE uname = ?");//prepare sql
         $stmt->bind_param("s", $name);//Test name are string
         $stmt->execute();//Check safty by sql prepare
         $safety_result = $stmt->get_result();
