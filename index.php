@@ -98,9 +98,9 @@
     <!-- Swiper -->
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img class="img-responsive" class="imgSize280" src="img/placeholder.gif" alt="test1"/></div>
-                        <div class="swiper-slide"><img class="img-responsive" class="imgSize280" src="img/placeholder.gif" alt="test1"/></div>
-                        <div class="swiper-slide"><img class="img-responsive" class="imgSize280" src="img/placeholder.gif" alt="test1"/></div>
+                        <div class="swiper-slide"><img class="img-responsive center" class="imgSize280" src="img/sample%201.jpg" alt="test1"/></div>
+                        <div class="swiper-slide"><img class="img-responsive center" class="imgSize280" src="img/placeholder.gif" alt="test1"/></div>
+                        <div class="swiper-slide"><img class="img-responsive center" class="imgSize280" src="img/placeholder.gif" alt="test1"/></div>
                         <div class="swiper-slide"><p class="tcenter">Coming soon!</p></div>
                     </div>
     <!-- Add Pagination -->
@@ -114,32 +114,41 @@
             </div>
 
     <!--Here is the first display container-->
-            <div class="container green">
+            <div id="step1" class="container green">
                 <p>
-                    <img class="img-responsive" src="img/placeholder.gif" alt="placeholder"/>
+                    <img class="img-responsive center" src="img/sample%203.jpg" alt="placeholder"/>
                 </p>
             </div>
     
     <!--Here is the second display container-->
-            <div id="explore" class="container white">
-                <h2>Explore</h2>
+            <div id="step2" class="container white">
+                
                 <p>
-                    <img class="img-responsive" src="img/placeholder.gif" alt="placeholder"/>
+                    <img class="img-responsive center" src="img/sample%205%20-%20upload%20photo.jpg" alt="placeholder"/>
                 </p>
             </div>
     <!--Here is the third display container-->
-            <div id="app" class="container green center">
-                <h2>APP</h2>
+            <div id="step3" class="container green center">
+                
                 <p class="tcenter">
-                    <img class="img-responsive" src="img/placeholder.gif" alt="placeholder"/>
+                    <img class="img-responsive center" src="img/sample%204.jpg" alt="placeholder"/>
                 </p>
             </div>
     
     <!--Here is the fourth display container-->
-            <div id="aboutus" class="container white">
-                <h2>About US</h2>
+            <div id="app" class="container white">
+                <p class="tcenter">
+                    <img class="img-responsive center" src="img/sample%202.jpg" alt="placeholder"/>
+                </p>
             </div>
         </div>
+    <!--Here is the third display container-->
+            <div id="about-us" class="container green center">
+                
+                <p class="tcenter">
+                    About us
+                </p>
+            </div>
 
   	<!--Here is the footer-->
         <div class="footer">
