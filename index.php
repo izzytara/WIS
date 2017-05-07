@@ -24,47 +24,45 @@
     <!--Here is the navigation-->
         <div class="nav-bar">
             <div class="container">
-                <div class="brand-centered">
+                
+                <p class="tcenter">
                     <a class="navbar-brand" href="index.php">
                         <img src="img/logo.png" alt="Traval Diary logo">
                     </a>
-                </div>
+                </p>
+                
+               
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li class="left active"><a href="#explore">Explore</a></li>
-                        <li class="left"><a href="#">My travel</a></li>
+                    <ul class="nav">
+                        <li class="left active"><a href="#explore">EXPLORE</a></li>
+                        <li class="left"><a href="#">MY TRAVEL</a></li>
                         <li class="left"><a href="#app">APP</a></li>
-                        <li class="left"><a href="#aboutus">About us</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="right"><a href="#"><span class="glyphicon glyphicon-globe"></span></a></li>
+                        <li class="left"><a href="#aboutus">ABOUT US</a></li>
+                    
+                        <li class="right"><a href="#">LANGUAGE</a></li>
                         <li class="right">
-                            <div class="dropdown">
+                            
                                 <!--If user has not loged in-->
                                 <?php
                                     session_start();
                                     if(!$_SESSION['auth']){
                                 ?>
-                                <div class="dropdown">
-                                    <a href="#" class="dropbtn" onclick="document.getElementById('userlogin').style.display='block'"><span class="glyphicon glyphicon-user"></span></a>
-                                </div>
+                                
+                                    <a href="#" onclick="document.getElementById('userlogin').style.display='block'">LOGIN</a>
+                                
 
                                 <!--If user has not loged in-->
                                 <?php
                                     }else if($_SESSION['auth']){
                                 ?>     
-                                    <div class="dropdown">
-                                    <a href="#" class="dropbtn"><span class="glyphicon glyphicon-user"></span></a>
-                                    </div>           
-                                    <div class="dropdown-content">
-                                    <form method="post" action="logout.php">
-                                    <button type="submit" name="logout">Logout</button>
-                                    </form>
-                                    </div>
+                                    
+                                    <a href="logout.php">LOGOUT</a>
+                                              
+                                    
                                 <?php
                                     }
                                 ?> 
-                            </div>                    
+                                              
                         </li>
                     </ul>
                 </div>

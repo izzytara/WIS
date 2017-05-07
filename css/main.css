@@ -1,11 +1,23 @@
 /*------
 Base styles
 ---------*/
+@font-face {
+
+font-family: Agency FB;
+
+src: url("http://uncutbeatz.com/clear/fonts/AGENCYR.TTF.ttf") format("truetype");
+
+font-style:normal;
+
+}
+
 body {
+    font-family: Agency-FB;
+
     margin: 0;
     padding: 0;
     background-color: #b8d6e7;
-    font: 1em/1.2 "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+    /*font: 1em/1.2 "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;*/
 }
 
 h1, h2, h3, h4 {
@@ -67,7 +79,8 @@ Layout syles
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 3;
+    z-index: 9999
+    
 }
 
 .content {
@@ -115,6 +128,8 @@ Nav-bar
 .nav li {
     display: inline;
     margin: 0;
+    font-size: 1.15em;
+    
 }
 
 .nav a {
@@ -144,20 +159,27 @@ Nav-bar
 .nav a:active {
 
 }
-.brand-centered {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
+
+.navbar-brand {
+  padding: 0;
 }
-.brand-centered .navbar-brand {
-  display: flex;
-  align-items: center;
+.navbar-brand>img {
+  height: 100%;
+  width: auto;
 }
-.navbar-toggle {
-    z-index: 1;
+
+
+
+
+
+
+
+.navbar-left{
+    float: left;
+}
+
+.navbar-right{
+    float: right;
 }
 
 
