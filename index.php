@@ -24,6 +24,9 @@
     <!--Here is the navigation-->
         <div class="nav-bar">
             <div class="container">
+                <a class="logo" href="index.php">
+                    <img src="img/logo.png" alt="Traval Diary logo">
+                </a>
                 <ul class="nav">
                     <li class="left"><a href="#explore">Explore</a></li>
                     <li class="left"><a href="#">My travel</a></li>
