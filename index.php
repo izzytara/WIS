@@ -24,45 +24,50 @@
     <!--Here is the navigation-->
         <div class="nav-bar">
             <div class="container">
-                <a class="logo" href="index.php">
-                    <img src="img/logo.png" alt="Traval Diary logo">
-                </a>
-                <ul class="nav">
-                    <li class="left"><a href="#explore">Explore</a></li>
-                    <li class="left"><a href="#">My travel</a></li>
-                    <li class="left"><a href="#app">APP</a></li>
-                    <li class="left"><a href="#aboutus">About us</a></li>
-                    <li class="left"><a href="index.html">Logo</a></li>
-                    <li class="right"><a href="#"><span class="glyphicon glyphicon-globe"></span></a></li>
-                    <li class="right">
-                    <div class="dropdown">
-                        <!--If user has not loged in-->
-                        <?php
-                            session_start();
-                            if(!$_SESSION['auth']){
-                        ?>
-                        <div class="dropdown">
-                            <a href="#" class="dropbtn" onclick="document.getElementById('userlogin').style.display='block'"><span class="glyphicon glyphicon-user"></span></a>
-                        </div>
-                        
-                        <!--If user has not loged in-->
-                        <?php
-                            }else if($_SESSION['auth']){
-                        ?>     
+                <div class="brand-centered">
+                    <a class="navbar-brand" href="index.php">
+                        <img src="img/logo.png" alt="Traval Diary logo">
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="left active"><a href="#explore">Explore</a></li>
+                        <li class="left"><a href="#">My travel</a></li>
+                        <li class="left"><a href="#app">APP</a></li>
+                        <li class="left"><a href="#aboutus">About us</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="right"><a href="#"><span class="glyphicon glyphicon-globe"></span></a></li>
+                        <li class="right">
                             <div class="dropdown">
-                            <a href="#" class="dropbtn"><span class="glyphicon glyphicon-user"></span></a>
-                            </div>           
-                            <div class="dropdown-content">
-                            <form method="post" action="logout.php">
-                            <button type="submit" name="logout">Logout</button>
-                            </form>
-                            </div>
-                        <?php
-                            }
-                        ?> 
-                    </div>                    
-                    </li>
-                </ul>
+                                <!--If user has not loged in-->
+                                <?php
+                                    session_start();
+                                    if(!$_SESSION['auth']){
+                                ?>
+                                <div class="dropdown">
+                                    <a href="#" class="dropbtn" onclick="document.getElementById('userlogin').style.display='block'"><span class="glyphicon glyphicon-user"></span></a>
+                                </div>
+
+                                <!--If user has not loged in-->
+                                <?php
+                                    }else if($_SESSION['auth']){
+                                ?>     
+                                    <div class="dropdown">
+                                    <a href="#" class="dropbtn"><span class="glyphicon glyphicon-user"></span></a>
+                                    </div>           
+                                    <div class="dropdown-content">
+                                    <form method="post" action="logout.php">
+                                    <button type="submit" name="logout">Logout</button>
+                                    </form>
+                                    </div>
+                                <?php
+                                    }
+                                ?> 
+                            </div>                    
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         
