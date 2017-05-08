@@ -183,8 +183,7 @@
                         <p>
                             <a href="#"><span class="glyphicon glyphicon-heart"></span></a>
                             <a href="#"><span>369</span>Like</a>
-                            <a class="btn btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></a>
-                            
+                            <a href="#"><span class="glyphicon glyphicon-share"></span></a>   
                         </p>
                     
                     </div>
