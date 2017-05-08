@@ -98,9 +98,9 @@
     <!-- Swiper -->
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img class="img-responsive center" class="imgSize280" src="img/sample%201.jpg" alt="test1"/></div>
-                        <div class="swiper-slide"><img class="img-responsive center" class="imgSize280" src="img/placeholder.gif" alt="test1"/></div>
-                        <div class="swiper-slide"><img class="img-responsive center" class="imgSize280" src="img/placeholder.gif" alt="test1"/></div>
+                        <div class="swiper-slide"><img class="img-responsive center" src="img/sample.jpg" alt="test1"/></div>
+                        <div class="swiper-slide"><img class="img-responsive center" src="img/Topadvertising.jpg" alt="test1"/></div>
+                        <div class="swiper-slide"><img class="img-responsive center" src="img/Topadvertising3.jpg" alt="test1"/></div>
                         <div class="swiper-slide"><p class="tcenter">Coming soon!</p></div>
                     </div>
     <!-- Add Pagination -->
@@ -158,7 +158,7 @@
             <div id="step3" class="container green center">
                 
                 <p class="tcenter">
-                    <img class="img-responsive center" src="img/sample%204.jpg" alt="Step 3 My Blog Post"/>
+                    <img class="img-responsive center" src="img/step3.png" alt="Step 3 My Blog Post"/>
                 </p>
                 <!--buttons-->
                 <div class="button center">
@@ -170,7 +170,7 @@
     <!--Here is the fourth display container-->
             <div id="app" class="container white">
                 <p class="tcenter">
-                    <img class="img-responsive center" src="img/sample%202.jpg" alt="app promotion picture"/>
+                    <img class="img-responsive center" src="img/app-green.jpg" alt="app promotion picture"/>
                 </p>
             </div>
     <!--Here is the footer-->
