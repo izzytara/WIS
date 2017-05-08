@@ -173,14 +173,6 @@
                     <img class="img-responsive center" src="img/sample%202.jpg" alt="app promotion picture"/>
                 </p>
             </div>
-    <!--Here is the third display container-->
-            <div id="about-us" class="container green center">
-                <h1 class="tcenter">About Us</h1>
-                <p class="tcenter">
-                    About us
-                </p>
-            </div>  
-        </div>
     <!--Here is the footer-->
     
     <div class="footer">

@@ -94,9 +94,10 @@ Layout syles
 }
 
 .footer {
+    margin: 1em 0 0 0;
     color: #888F91;
     background-color: #fff;
-    padding: 1em 1.25em;
+    /*padding: 1em 1.25em;*/
     text-align: center;
 }
 .right {
