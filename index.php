@@ -97,7 +97,7 @@
     <!--Here is the first swipper to display sample of diary -->
         <div  class="container">
     <!-- Swiper -->
-                <div class="swiper-container">
+                <div class="swiper-container swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img class="img-responsive center" src="img/sample.jpg" alt="test1"/></div>
                         <div class="swiper-slide"><img class="img-responsive center" src="img/Topadvertising.jpg" alt="test1"/></div>
@@ -117,83 +117,45 @@
             </div>
    
         
-    <!--Here is the swipper display popular works-->
-        <div>
-             <div  class="container">
-    <!-- Swiper -->
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div id="popular-works" class="container white">
-                                <div class="diary-display">
-                <div id="photo">
-                    <img class="img-responsive" src="img/test-photo.jpg" alt="placeholder">
-                </div>
-                <div id="diary">
-                    <div id="location">
-                        <p><img>Location</p>
-                    </div>
-                    <div id="text">
-                        <p class="title">Title: <span>My First Trip at Thailand</span></p>
-                        <p>For our last two night.......</p>
-                    </div>
-                    <div id="vote-like">
-                        <p><a href="#"><span>369</span>Like</a></p>
-                        <p></p>
-                    </div>
-                    
-                    <div id="author-date">
-                        <p>By:<span>Amy</span>Date:<span>2017-05-23</span></p>
-                    </div>
-                
-                </div>
-                
-            </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide"><img class="img-responsive center" src="img/Topadvertising.jpg" alt="test1"/></div>
-                        <div class="swiper-slide"><img class="img-responsive center" src="img/Topadvertising3.jpg" alt="test1"/></div>
-                        <div class="swiper-slide"><p class="tcenter">Coming soon!</p></div>
-                    </div>
-    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-    <!-- Add Arrows -->
-                    <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
-               </div>
-            </div>
-        </div>
+    
     <!--Here is popular works display container-->
         <div id="popular-works" class="container white">
             <div class="diary-display">
-                <div id="photo">
+                <div class="photo">
                     <img class="img-responsive" src="img/test-photo.jpg" alt="placeholder">
                 </div>
-                <div id="diary">
-                    <div id="location">
+                <div class="diary">
+                    <div class="location">
                         <p>
                             <span class="glyphicon glyphicon-map-marker"></span>
                             <span>Locatoin</span>
                         </p>
                     </div>
-                    <div id="text">
-                        <p class="title">Title: <span>My First Trip at Thailand</span></p>
-                        <p>For our last two night.......</p>
-                    </div>
-                    <div id="vote-like">
-                        <p>
-                            <a href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                            <a href="#"><span>369</span>Like</a>
-                            <a href="#"><span class="glyphicon glyphicon-share"></span></a>   
-                        </p>
                     
+                    
+                    <div class="title">
+                        <p>Title: <span>My First Trip at Thailand</span></p>
                     </div>
                     
-                    <div id="author-date">
+                    <div class="author-date">
                         <p>By:<span>Amy</span>Date:<span>2017-05-23</span></p>
                     </div>
+                    
+                    <div class="text">
+                        <p>For our last two night.......</p>
+                    </div>
+                    
+                    
                 
                 </div>
-                
+                           
+            </div>
+            <div class="vote-like">
+                    <p>
+                        <a href="#"><span class="glyphicon glyphicon-heart"></span></a>
+                        <a href="#"><span>369</span>Like</a>
+                        <a href="#"><span class="glyphicon glyphicon-share"></span></a>   
+                    </p>  
             </div>
         </div>
 
