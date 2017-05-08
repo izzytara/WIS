@@ -359,7 +359,7 @@ Popular works
 }
 
 .diary-display{
-    
+    padding-top: 1em;
     
 }
 .photo {
@@ -387,6 +387,7 @@ Popular works
 }
 
 .title {
+    padding: 0 1.25em;
     width:100%;
     display: block;
     clear:both;
@@ -394,6 +395,7 @@ Popular works
 }
 
 .author-date{
+    padding: 0 1.25em;
     display: block;
     float:left;
     font-style: italic;
@@ -402,6 +404,7 @@ Popular works
 }
 
 .text{
+    padding: 0 1.25em;
     width: 100%;
     display: block;
     clear:both;
