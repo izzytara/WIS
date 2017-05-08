@@ -27,7 +27,7 @@
                 
                 <p class="tcenter">
                     <a class="navbar-brand" href="index.php">
-                        <img src="img/logo.png" alt="Traval Diary logo">
+                        <img src="img/LOGO.png" alt="Traval Diary logo">
                     </a>
                 </p>
                 
@@ -74,10 +74,8 @@
             <div class="login">
                 <form class="modal-content animate" action="login.php" method="post">
                     <h2 class="tcenter">Login</h2>
-                    <div class="imgcontainer">
-                    </div>
 
-                    <div class="container">
+                    <div>
                         <label><b>Username</b></label>
                         <br>
                         <input type="text" placeholder="Enter username" name="username" required>
@@ -115,16 +113,17 @@
                 </div>
             </div>
     <!--Here is popular works display container-->
-            <div id="popular-works" class="container white">
+        <div id="popular-works" class="container white">
+            <div  class="diary-display">
                 <div id="photo">
-                    <img class="img-responsive" src="img/placeholder.gif" alt="placeholder">
+                    <img class="img-responsive" src="img/test-photo.jpg" alt="placeholder">
                 </div>
                 <div id="diary">
                     <div id="location">
                         <p><img>Location</p>
                     </div>
                     <div id="text">
-                        <h1>Title: <span>My First Trip at Thailand</span></h1>
+                        <p class="title">Title: <span>My First Trip at Thailand</span></p>
                         <p>For our last two night.......</p>
                     </div>
                     <div id="vote-like">
@@ -139,6 +138,7 @@
                 </div>
                 
             </div>
+        </div>
 
     <!--Here is the first display container-->
             <div id="step1" class="container green">
