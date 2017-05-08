@@ -70,7 +70,7 @@
         </div>
         
     <!--Here is the login form-->
-        <div id="userlogin" class="modal">
+    <div id="userlogin" class="modal">
             <div class="login">
                 <form class="modal-content animate" action="login.php" method="post">
                     <h2 class="tcenter">Login</h2>
@@ -93,7 +93,7 @@
         </div>
 
     <!--Here is the content-->
-        <div class="content">
+    <div class="content">
             <div class="container">
     <!-- Swiper -->
                 <div class="swiper-container">
@@ -107,16 +107,43 @@
                     <div class="swiper-pagination"></div>
     <!-- Add Arrows -->
                     <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
-            </div>
+               </div>
     <!--buttons-->
-                <p class="tcenter"><a href="#" class="btn"><span class="glyphicon glyphicon-edit"></span>&nbsp Start</a>
-                </p>
+                <div class="button center">
+                    <p class="tcenter"><a href="#" class="btn"><span id="start-icon" class="glyphicon glyphicon-edit"></span>Start Your Diary</a>
+                    </p>
+                </div>
+            </div>
+    <!--Here is popular works display container-->
+            <div id="popular-works" class="container white">
+                <div id="photo">
+                    <img class="img-responsive" src="img/placeholder.gif" alt="placeholder">
+                </div>
+                <div id="diary">
+                    <div id="location">
+                        <p><img>Location</p>
+                    </div>
+                    <div id="text">
+                        <h1>Title: <span>My First Trip at Thailand</span></h1>
+                        <p>For our last two night.......</p>
+                    </div>
+                    <div id="vote-like">
+                        <p><a href="#"><span>369</span>Like</a></p>
+                        <p></p>
+                    </div>
+                    
+                    <div id="author-date">
+                        <p>By:<span>Amy</span>Date:<span>2017-05-23</span></p>
+                    </div>
+                
+                </div>
+                
             </div>
 
     <!--Here is the first display container-->
             <div id="step1" class="container green">
                 <p>
-                    <img class="img-responsive center" src="img/sample%203.jpg" alt="placeholder"/>
+                    <img class="img-responsive center" src="img/step1.png" alt="Step 1 choose your location"/>
                 </p>
             </div>
     
@@ -124,38 +151,43 @@
             <div id="step2" class="container white">
                 
                 <p>
-                    <img class="img-responsive center" src="img/sample%205%20-%20upload%20photo.jpg" alt="placeholder"/>
+                    <img class="img-responsive center" src="img/step2.png" alt="Step 2 Upload your pictures"/>
                 </p>
             </div>
     <!--Here is the third display container-->
             <div id="step3" class="container green center">
                 
                 <p class="tcenter">
-                    <img class="img-responsive center" src="img/sample%204.jpg" alt="placeholder"/>
+                    <img class="img-responsive center" src="img/sample%204.jpg" alt="Step 3 My Blog Post"/>
                 </p>
+                <!--buttons-->
+                <div class="button center">
+                    <p class="tcenter"><a href="#" class="btn"><span class="glyphicon glyphicon-edit start-icon"></span>Start Your Diary</a>
+                    </p>
+                </div>
             </div>
     
     <!--Here is the fourth display container-->
             <div id="app" class="container white">
                 <p class="tcenter">
-                    <img class="img-responsive center" src="img/sample%202.jpg" alt="placeholder"/>
+                    <img class="img-responsive center" src="img/sample%202.jpg" alt="app promotion picture"/>
                 </p>
             </div>
-        </div>
     <!--Here is the third display container-->
             <div id="about-us" class="container green center">
-                
+                <h1 class="tcenter">About Us</h1>
                 <p class="tcenter">
                     About us
                 </p>
-            </div>
-
-  	<!--Here is the footer-->
-        <div class="footer">
-            <div class="container">
-                &copy; Copyright 2017
-            </div>
+            </div>  
         </div>
+    <!--Here is the footer-->
+    
+    <div class="footer">
+        <div class="container">
+                &copy; Copyright 2017
+        </div>
+    </div>
 
     <!-- Initialize Swiper -->
     <script>
