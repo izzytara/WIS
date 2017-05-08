@@ -171,7 +171,7 @@
                 <div id="diary">
                     <div id="location">
                         <p>
-                            <span class="icono-mail"></span>
+                            <span class="glyphicon glyphicon-map-marker"></span>
                             <span>Locatoin</span>
                         </p>
                     </div>
@@ -181,9 +181,12 @@
                     </div>
                     <div id="vote-like">
                         <p>
-                            <a href="#"><span class="glyphicon glyphicons-heart"></span></a>
-                            <a href="#"><span>369</span>Like</a></p>
-                        <p></p>
+                            <a href="#"><span class="glyphicon glyphicon-heart"></span></a>
+                            <a href="#"><span>369</span>Like</a>
+                            <a class="btn btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></a>
+                            
+                        </p>
+                    
                     </div>
                     
                     <div id="author-date">
