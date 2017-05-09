@@ -1,0 +1,37 @@
+/* --------------------
+design
+-----------------------*/
+.choose-location{
+    padding: 3em 0;
+    position: relative;
+} 
+
+.choose-location h3,p {
+    color: white;
+}
+
+
+
+.map{
+    width:35em;
+    height: auto;
+    border: 1px solid white;
+    padding-top: 1em;
+}
+
+.stepbar{
+    
+}
+.stepbar img{
+    width:30em;
+    height:5em;
+}
+.step-button{
+    position: absolute;
+    right: 5%;
+    top: 6em;
+}
+
+.step-button a{
+    font-size: 80%;
+}

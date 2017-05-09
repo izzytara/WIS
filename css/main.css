@@ -335,11 +335,14 @@ Image styles
 -----------------------*/
 img {
     text-align: center;
+    
 }
 .imgcontainer {
     text-align: center;
     position: relative;
 }
+
+
 
 .imgSize280 {
         text-align: center;
@@ -429,8 +432,22 @@ Popular works
 .vote-like span{
     margin: .25em 1em;
 }
+
+/* --------------------
+design
+-----------------------*/
     
+.progress-bar{
+    text-align: center;
     
+}
+
+.progress-bar img{
+    width: 40em;
+    height: auto;
+    margin: 0 auto;
+    
+}
 
 
 
