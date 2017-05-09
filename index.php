@@ -40,20 +40,20 @@
                         <li class="left"><a href="#aboutus">ABOUT US</a></li>                    
                         <li class="right"><a href="#">LANGUAGE</a></li>
                         <li class="right">                           
-                                <!--If user has not loged in-->
-                                <?php
-                                    session_start();
-                                    if(!$_SESSION['auth']){
-                                ?>                               
-                                    <a href="#" onclick="document.getElementById('userlogin').style.display='block'">LOGIN</a>                       
-                                <!--If user has not loged in-->
-                                <?php
-                                    }else if($_SESSION['auth']){
-                                ?>                                      
-                                    <a href="logout.php">LOGOUT</a>                                                                                 
-                                <?php
-                                    }
-                                ?>                                               
+                        <!--If user has not loged in-->
+                        <?php
+                            session_start();
+                            if(!$_SESSION['auth']){
+                        ?>                               
+                            <a href="#" onclick="document.getElementById('userlogin').style.display='block'">LOGIN</a>                       
+                        <!--If user has not loged in-->
+                        <?php
+                            }else if($_SESSION['auth']){
+                        ?>                                      
+                            <a href="logout.php">LOGOUT</a>                                                                                 
+                        <?php
+                            }
+                        ?>                                               
                         </li>
                     </ul>
                 </div>
@@ -92,7 +92,6 @@
                         <div class="swiper-slide"><img class="img-responsive center" src="img/sample.jpg" alt="test1"/></div>
                         <div class="swiper-slide"><img class="img-responsive center" src="img/Topadvertising.jpg" alt="test1"/></div>
                         <div class="swiper-slide"><img class="img-responsive center" src="img/Topadvertising3.jpg" alt="test1"/></div>
-                        <div class="swiper-slide"><p class="tcenter">Coming soon!</p></div>
                     </div>
     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -108,7 +107,7 @@
    
         
     
-    <!--Here is popular works display container-->
+    <!--Here is popular works display container
         <div id="popular-works" class="container white">
             <div class="diary-display">
                 <div class="photo">
@@ -142,7 +141,7 @@
                         <a href="#"><span class="glyphicon glyphicon-share"></span></a>   
                     </p>  
             </div>
-        </div>
+        </div>-->
 
     <!--Here is test popular works display container-->
         <?php
@@ -152,10 +151,11 @@
         $popularres = mysqli_query($connect, $popular);
         while($popular1 = mysqli_fetch_assoc($popularres)){
         ?>
+        <!--Get All stroies, sorted by popular-->
         <div id="popular-works" class="container white">
             <div class="diary-display">
                 <div class="photo">
-                    <img class="img-responsive" src="img/test-photo.jpg" alt="placeholder">
+                    <img class="img-responsive" src="<?php echo $popular1[image_URL];?>" id="<?php echo $popular1[storyid];?>" alt="placeholder">
                 </div>
                 <div class="diary">
                     <div class="location">
@@ -167,6 +167,7 @@
                     <div class="title">
                         <p>Title: <span><?php echo $popular1[title];?></span></p>
                     </div>
+                    <!--Get author name from uid-->
                     <?php
                     $findunamebyuid = "SELECT uname FROM travel_user WHERE uid= '$popular1[uid]'";
                     $nameres = mysqli_query($connect, $findunamebyuid);
@@ -185,7 +186,7 @@
             <div class="vote-like">
                     <p>
                         <a href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                        <a href="#"><span><?php echo $popular1[popular];?></span>Like</a>
+                        <span><?php echo $popular1[popular];?></span>Like
                         <a href="#"><span class="glyphicon glyphicon-share"></span></a>   
                     </p>  
             </div>
