@@ -31,39 +31,29 @@
                         <img src="img/LOGO.png" alt="Traval Diary logo">
                     </a>
                 </p>
-                
-               
+                               
                 <div class="navbar-collapse collapse">
                     <ul class="nav">
                         <li class="left active"><a href="#explore">EXPLORE</a></li>
                         <li class="left"><a href="#">MY TRAVEL</a></li>
                         <li class="left"><a href="#app">APP</a></li>
-                        <li class="left"><a href="#aboutus">ABOUT US</a></li>
-                    
+                        <li class="left"><a href="#aboutus">ABOUT US</a></li>                    
                         <li class="right"><a href="#">LANGUAGE</a></li>
-                        <li class="right">
-                            
+                        <li class="right">                           
                                 <!--If user has not loged in-->
                                 <?php
                                     session_start();
                                     if(!$_SESSION['auth']){
-                                ?>
-                                
-                                    <a href="#" onclick="document.getElementById('userlogin').style.display='block'">LOGIN</a>
-                                
-
+                                ?>                               
+                                    <a href="#" onclick="document.getElementById('userlogin').style.display='block'">LOGIN</a>                       
                                 <!--If user has not loged in-->
                                 <?php
                                     }else if($_SESSION['auth']){
-                                ?>     
-                                    
-                                    <a href="logout.php">LOGOUT</a>
-                                              
-                                    
+                                ?>                                      
+                                    <a href="logout.php">LOGOUT</a>                                                                                 
                                 <?php
                                     }
-                                ?> 
-                                              
+                                ?>                                               
                         </li>
                     </ul>
                 </div>
@@ -130,9 +120,7 @@
                             <span class="glyphicon glyphicon-map-marker"></span>
                             <span>Locatoin</span>
                         </p>
-                    </div>
-                    
-                    
+                    </div>                    
                     <div class="title">
                         <p>Title: <span>My First Trip at Thailand</span></p>
                     </div>
@@ -143,13 +131,10 @@
                     
                     <div class="text">
                         <p>For our last two night.......</p>
-                    </div>
-                    
-                    
-                
-                </div>
-                           
+                    </div>                
+                </div>                           
             </div>
+
             <div class="vote-like">
                     <p>
                         <a href="#"><span class="glyphicon glyphicon-heart"></span></a>
@@ -167,8 +152,7 @@
         </div>
     
     <!--Here is the second display container-->
-        <div id="step2" class="container white">
-                
+        <div id="step2" class="container white">               
                 <p>
                     <img class="img-responsive center" src="img/step2.png" alt="Step 2 Upload your pictures"/>
                 </p>
