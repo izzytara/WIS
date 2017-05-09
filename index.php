@@ -144,6 +144,56 @@
             </div>
         </div>
 
+    <!--Here is test popular works display container-->
+        <?php
+        header("Content-Type: text/html; charset=utf8");
+        include('Connect.php');
+        $popular = "SELECT * FROM travel_story order by `popular` DESC LIMIT 10;";
+        $popularres = mysqli_query($connect, $popular);
+        while($popular1 = mysqli_fetch_assoc($popularres)){
+        ?>
+        <div id="popular-works" class="container white">
+            <div class="diary-display">
+                <div class="photo">
+                    <img class="img-responsive" src="img/test-photo.jpg" alt="placeholder">
+                </div>
+                <div class="diary">
+                    <div class="location">
+                        <p>
+                            <span class="glyphicon glyphicon-map-marker"></span>
+                            <span><?php echo $popular1[location];?></span>
+                        </p>
+                    </div>                    
+                    <div class="title">
+                        <p>Title: <span><?php echo $popular1[title];?></span></p>
+                    </div>
+                    <?php
+                    $findunamebyuid = "SELECT uname FROM travel_user WHERE uid= '$popular1[uid]'";
+                    $nameres = mysqli_query($connect, $findunamebyuid);
+                    $nameres1 = mysqli_fetch_assoc($nameres);
+                    ?>
+                    <div class="author-date">
+                        <p>By:<span><?php echo $nameres1[uname];?></span>Date:<span><?php echo $popular1[update_time];?></span></p>
+                    </div>
+                    
+                    <div class="text">
+                        <p><?php echo $popular1[story];?></p>
+                    </div>                
+                </div>                           
+            </div>
+
+            <div class="vote-like">
+                    <p>
+                        <a href="#"><span class="glyphicon glyphicon-heart"></span></a>
+                        <a href="#"><span><?php echo $popular1[popular];?></span>Like</a>
+                        <a href="#"><span class="glyphicon glyphicon-share"></span></a>   
+                    </p>  
+            </div>
+        </div>
+        <?php
+        }
+        ?>
+
     <!--Here is the first display container-->
         <div id="step1" class="container green">
             <p>
