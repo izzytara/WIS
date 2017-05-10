@@ -1,30 +1,81 @@
 /* --------------------
 design
 -----------------------*/
-.choose-location{
+.design-outside{
     padding: 3em 0;
     position: relative;
 } 
 
-.choose-location h3,p {
-    color: white;
+
+.design-inside{
+    width:40.2em;
+    height:28.2em;
+    
+}
+
+#step1 .design-inside{
+    border: .1em solid white;
+}
+
+#step1 .design-area{
+    border-top: .1em solid white;
+}
+
+#step2 .design-inside{
+    border: .1em solid black;
+}
+
+#step2 .design-area{
+    padding: 1em 0;
+    border-top: .1em solid black;
+}
+
+#step3 .design-inside{
+    border: .1em solid white;
 }
 
 
 
-.map{
-    width:35em;
-    height: auto;
-    border: 1px solid white;
+.textarea{
+
+}
+
+
+
+
+
+.step-instruct {
     padding-top: 1em;
+    height: 3em;
+}
+
+.design-area{
+    width: 40em;
+    height: 25em;
+}
+
+.design-area img{
+    width:100%;
+    height:25em;
+    
+}
+#upload-img{
+    width:30em;
+    height:20em;   
+}
+
+.upload-btn{
+    display: block;
+    margin: 1em 1em;
 }
 
 .stepbar{
+    padding: 1em 0;
     
 }
 .stepbar img{
     width:30em;
-    height:5em;
+    height:auto;
 }
 .step-button{
     position: absolute;

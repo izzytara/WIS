@@ -70,6 +70,7 @@ Layout syles
 }
 .green {
     background-color: #01b6c6;
+    color: white;
     
 }
 
@@ -77,6 +78,7 @@ Layout syles
 
 .white {
     background-color: white;
+    color:black;
 }
 .nav-bar {
     color: #888F91;
@@ -90,7 +92,7 @@ Layout syles
 }
 
 .content {
-    padding: 1em 1.25em;
+    padding: 10em 1.25em;
     background-color: #b8d6e7;
    
     margin-top: 5em;

@@ -86,13 +86,14 @@
 
     <!--Here is the content-->
     <div class="content">
-         <!--Here is the Step1 container-->
+    <!--Here is the Step1 container-->
         <div id="step1" class="container green">
-            <div class="choose-location">
+            <div class="design-outside">
                 <h3 class="tcenter">1. Choose Location</h3>
-                <div class="map center">
-                    <p class="tcenter">Please chick you current location from the Google Map</p>
-                    <div class="google-map">
+                <div class="design-inside center">
+                    
+                    <div class="step-instruct"><p class="tcenter">Please chick you current location from the Google Map</p></div>
+                    <div class="design-area">
                         <img class="img-responsive center" src="img/location.png" alt="google map"/>
                     </div>
                 </div>
@@ -106,44 +107,57 @@
     
     
     <!--Here is the Step2 container-->
-        <div id="step1" class="container green">
-            <div class="choose-location">
+        
+        <div id="step2" class="container white">
+            <div class="design-outside">
                 <h3 class="tcenter">2. Upload Your Pictures</h3>
-                <div class="map center">
-                    <p class="tcenter">Please choose your photograph from your mobile or computer</p>
-                    <div class="google-map stepimg">
-                        <img class="img-responsive center" src="img/upload%20picture.png" alt="upload picture holder"/>
-                        <div class="button center">
-                            <p class="tcenter"><a href="#" class="btn">Upload</a></p>
+                <div class="design-inside center">
                     
-                        </div>
-                    </div>
+                    <div class="step-instruct"><p class="tcenter">Please choose your photograph from your mobile or computer</p></div>
+                     
+                    
+                    <div class="design-area">
+                        <img id="upload-img" class="img-responsive center" src="img/upload%20image.png" alt="upload photo"/>
+                        
+                        <p class="upload-btn" class="tcenter"><a href="#" class="btn">Upload</a>    <a href="#" class="btn">Next Step</a></p>
+                        
+                    </div>              
                 </div>
                 <div class="stepbar"><p class="tcenter">
-                    <img class="img-responsive center" src="img/step2nav.png" alt="step2 nav progress bar"/></p>
+                    <img class="img-responsive center" src="img/step1nav.png" alt="step1 nav progress bar"/></p>
                 </div>
                 
                 <div class=" step-button btn"><a>G<br>O<br><br>T<br>O<br><br>N<br>E<br>X<br>T<br><br>S<br>T<br>E<br>P</a></div>          
             </div>
         </div>
         
+        
+        
     <!--Here is the third display container-->
-        <div id="step1" class="container green">
-            <div class="choose-location">
-                <h3 class="tcenter">3. My blog Post</h3>
-                <div class="map center">
+        <div id="step3" class="container green">
+            <div class="design-outside">
+                <h3 class="tcenter">3. My Blog Post</h3>
+                <div class="design-inside center">
                     
-                    <div class="google-map stepimg">
-                        <img class="img-responsive center" src="img/step3%202.png" alt="upload picture holder"/>
+                    <div class="step-instruct">
+                    
                     </div>
+                    <div class="design-area textarea">
+                        <textarea class="center" rows="1" cols="60" placeholder="Write your title "></textarea>
+                        <label></label>
+                        <textarea class="center" rows="11" cols="60" placeholder="Write in your journal here"></textarea>
+                        <p class="upload-btn" class="tcenter"><a href="#" class="btn">Save</a><a href="#" class="btn">Finish</a></p>
+                    </div>
+                    
                 </div>
                 <div class="stepbar"><p class="tcenter">
-                    <img class="img-responsive center" src="img/step3nav.png" alt="step2 nav progress bar"/></p>
+                    <img class="img-responsive center" src="img/step1nav.png" alt="step1 nav progress bar"/></p>
                 </div>
                 
                 <div class=" step-button btn"><a>G<br>O<br><br>T<br>O<br><br>N<br>E<br>X<br>T<br><br>S<br>T<br>E<br>P</a></div>          
             </div>
         </div>
+        
     
     
     </div>
@@ -155,29 +169,6 @@
         </div>
     </div>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            slidesPerView: 1,
-            paginationClickable: true,
-            spaceBetween: 30,
-            loop: true
-        });
-    </script>
-        
-    <script>
-    //get the modal
-        var modal = document.getElementById('userlogin');
-    //when the user clicks anywhere out side the modal, close it
-        window.onclick = function(event){
-            if (event.target == modal){
-            modal.style.display = "none";
-        }
-    }
-    </script>
-
+    
 	</body>
 </html>
