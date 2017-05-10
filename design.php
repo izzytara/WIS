@@ -86,78 +86,78 @@
 
     <!--Here is the content-->
     <div class="content">
+        
+<!--*****The form starts here*******-->
+        <form>
     <!--Here is the Step1 container-->
-        <div id="step1" class="container green">
-            <div class="design-outside">
-                <h3 class="tcenter">1. Choose Location</h3>
-                <div class="design-inside center">
-                    
-                    <div class="step-instruct"><p class="tcenter">Please chick you current location from the Google Map</p></div>
-                    <div class="design-area">
-                        <img class="img-responsive center" src="img/location.png" alt="google map"/>
+            <div id="step1" class="container green">
+                <div class="design-outside">
+                    <h3 class="tcenter">1. Choose Location</h3>
+                    <div class="design-inside center">
+
+                        <div class="step-instruct"><p class="tcenter">Please chick you current location from the Google Map</p></div>
+                        <div class="design-area">
+                            <img class="img-responsive center" src="img/location.png" alt="google map"/>
+                        </div>
                     </div>
-                </div>
-                <div class="stepbar"><p class="tcenter">
-                    <img class="img-responsive center" src="img/step1nav.png" alt="step1 nav progress bar"/></p>
-                </div>
-                
-                <div class=" step-button btn"><a>G<br>O<br><br>T<br>O<br><br>N<br>E<br>X<br>T<br><br>S<br>T<br>E<br>P</a></div>          
-            </div>
-        </div>
-    
-    
-    <!--Here is the Step2 container-->
-        
-        <div id="step2" class="container white">
-            <div class="design-outside">
-                <h3 class="tcenter">2. Upload Your Pictures</h3>
-                <div class="design-inside center">
-                    
-                    <div class="step-instruct"><p class="tcenter">Please choose your photograph from your mobile or computer</p></div>
-                     
-                    
-                    <div class="design-area">
-                        <img id="upload-img" class="img-responsive center" src="img/upload%20image.png" alt="upload photo"/>
-                        
-                        <p class="upload-btn" class="tcenter"><a href="#" class="btn">Upload</a>    <a href="#" class="btn">Next Step</a></p>
-                        
-                    </div>              
-                </div>
-                <div class="stepbar"><p class="tcenter">
-                    <img class="img-responsive center" src="img/step1nav.png" alt="step1 nav progress bar"/></p>
-                </div>
-                
-                <div class=" step-button btn"><a>G<br>O<br><br>T<br>O<br><br>N<br>E<br>X<br>T<br><br>S<br>T<br>E<br>P</a></div>          
-            </div>
-        </div>
-        
-        
-        
-    <!--Here is the third display container-->
-        <div id="step3" class="container green">
-            <div class="design-outside">
-                <h3 class="tcenter">3. My Blog Post</h3>
-                <div class="design-inside center">
-                    
-                    <div class="step-instruct">
-                    
+                    <div class="stepbar"><p class="tcenter">
+                        <img class="img-responsive center" src="img/step1nav.png" alt="step1 nav progress bar"/></p>
                     </div>
-                    <div class="design-area textarea">
-                        <textarea class="center" rows="1" cols="60" placeholder="Write your title "></textarea>
-                        <label></label>
-                        <textarea class="center" rows="11" cols="60" placeholder="Write in your journal here"></textarea>
-                        <p class="upload-btn" class="tcenter"><a href="#" class="btn">Save</a><a href="#" class="btn">Finish</a></p>
-                    </div>
-                    
+
                 </div>
-                <div class="stepbar"><p class="tcenter">
-                    <img class="img-responsive center" src="img/step1nav.png" alt="step1 nav progress bar"/></p>
-                </div>
-                
-                <div class=" step-button btn"><a>G<br>O<br><br>T<br>O<br><br>N<br>E<br>X<br>T<br><br>S<br>T<br>E<br>P</a></div>          
             </div>
-        </div>
-        
+
+
+        <!--Here is the Step2 container-->
+
+            <div id="step2" class="container white">
+                <div class="design-outside">
+                    <h3 class="tcenter">2. Upload Your Pictures</h3>
+                    <div class="design-inside center">
+
+                        <div class="step-instruct"><p class="tcenter">Please choose your photograph from your mobile or computer</p></div>
+
+
+                        <div class="design-area">
+                            <img id="upload-img" class="img-responsive center" src="img/upload%20image.png" alt="upload photo"/>
+                            <p class="tcenter"><button class="btn" type="submit" name="signup">Upload</button></p>
+
+
+                        </div>              
+                    </div>
+                    <div class="stepbar"><p class="tcenter">
+                        <img class="img-responsive center" src="img/step1nav.png" alt="step1 nav progress bar"/></p>
+                    </div>      
+                </div>
+            </div>
+
+
+
+        <!--Here is the third display container-->
+            <div id="step3" class="container green">
+                <div class="design-outside">
+                    <h3 class="tcenter">3. My Blog Post</h3>
+                    <div class="design-inside center">
+
+                        <div class="step-instruct">
+
+                        </div>
+                        <div class="design-area textarea">
+                            <textarea class="center" rows="1" cols="60" placeholder="Write your title "></textarea>
+                            <label></label>
+                            <textarea class="center" rows="11" cols="60" placeholder="Write in your journal here"></textarea>
+                            <p class="tcenter"><button class="btn" type="submit" name="signup">Done</button></p>
+                        </div>
+
+                    </div>
+                    <div class="stepbar"><p class="tcenter">
+                        <img class="img-responsive center" src="img/step1nav.png" alt="step1 nav progress bar"/></p>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+<!--*****The form ends here*******-->
     
     
     </div>
