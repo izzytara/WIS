@@ -37,7 +37,13 @@ design
 
 
 .textarea{
+    color: black;
+}
 
+textarea{
+    resize: none;
+    overflow: hidden;
+    
 }
 
 
@@ -65,8 +71,7 @@ design
 }
 
 .stepbar{
-    padding: 1em 0;
-    
+    padding: 1em 0;    
 }
 .stepbar img{
     width:30em;

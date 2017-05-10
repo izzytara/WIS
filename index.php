@@ -100,7 +100,7 @@
                </div>
     <!--buttons-->
                 <div class="button center">
-                    <p class="tcenter"><a href="#" class="btn"><span id="start-icon" class="glyphicon glyphicon-edit"></span>Start Your Diary</a>
+                    <p class="tcenter"><a href="design.php" class="btn"><span id="start-icon" class="glyphicon glyphicon-edit"></span>Start Your Diary</a>
                     </p>
                 </div>
             </div>
@@ -174,7 +174,7 @@
                     $nameres1 = mysqli_fetch_assoc($nameres);
                     ?>
                     <div class="author-date">
-                        <p>By:<span><?php echo $nameres1[uname];?></span>Date:<span><?php echo $popular1[update_time];?></span></p>
+                        <p>By:&nbsp;<span><?php echo $nameres1[uname];?></span>&nbsp;Date: <span><?php echo $popular1[update_time];?></span></p>
                     </div>
                     
                     <div class="text">
@@ -216,7 +216,7 @@
                 </p>
                 <!--buttons-->
                 <div class="button center">
-                    <p class="tcenter"><a href="#" class="btn"><span class="glyphicon glyphicon-edit start-icon"></span>Start Your Diary</a>
+                    <p class="tcenter"><a href="design.php" class="btn"><span class="glyphicon glyphicon-edit start-icon"></span>Start Your Diary</a>
                     </p>
                 </div>
             </div>

@@ -126,7 +126,7 @@
                         </div>              
                     </div>
                     <div class="stepbar"><p class="tcenter">
-                        <img class="img-responsive center" src="img/step1nav.png" alt="step1 nav progress bar"/></p>
+                        <img class="img-responsive center" src="img/step2nav.png" alt="step1 nav progress bar"/></p>
                     </div>      
                 </div>
             </div>
@@ -143,15 +143,15 @@
 
                         </div>
                         <div class="design-area textarea">
-                            <textarea class="center" rows="1" cols="60" placeholder="Write your title "></textarea>
-                            <label></label>
-                            <textarea class="center" rows="11" cols="60" placeholder="Write in your journal here"></textarea>
+                            <textarea class="center" rows="1" cols="60" placeholder="Write your title here." required></textarea>
+                            <br>
+                            <textarea class="center" rows="11" cols="60" placeholder="Write in your journal here." required></textarea>
                             <p class="tcenter"><button class="btn" type="submit" name="signup">Done</button></p>
                         </div>
 
                     </div>
                     <div class="stepbar"><p class="tcenter">
-                        <img class="img-responsive center" src="img/step1nav.png" alt="step1 nav progress bar"/></p>
+                        <img class="img-responsive center" src="img/step3nav.png" alt="step1 nav progress bar"/></p>
                     </div>
 
                 </div>

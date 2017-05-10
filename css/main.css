@@ -405,13 +405,17 @@ Popular works
     display: block;
     float:left;
     font-style: italic;
-    font: blue;
-    
+    font: blue;   
 }
+
+
 
 .text{
     padding: 0 1.25em;
-    width: 45em;
+    width:100%;
+    white-space: normal;
+    word-wrap: break-word;
+    
     display: block;
     clear:both;
     
