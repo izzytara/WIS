@@ -121,6 +121,7 @@
 
                         <div class="design-area">
                             <img id="upload-img" class="img-responsive center" src="img/upload%20image.png" alt="upload photo"/>
+                            <!--这边调整css-->
                             <input type="file" name="file" id="file" /> 
                             <p class="tcenter"><input class="btn" type="submit" name="submit" value="Upload" /></p>
                         </div>              

@@ -17,7 +17,7 @@ if ((($_FILES["file"]["type"] == "image/gif")
     //echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br />";
     if (file_exists("storyimg/" . $_FILES["file"]["name"]))//If same file
       {
-      echo "<script>alert('This img already exists!');</script>";
+      echo "<script>alert('This img already exists!');history.go(-1);</script>";
       }
     else//If success
       {
