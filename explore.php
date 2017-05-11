@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Diary</title>
     <link rel="stylesheet" href="css/main.css">
+    
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="css/swiper.css">
         
     <!-- Link Bootstrap's CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <!-- Link Bootstrap's js -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Link Siper's js-->
     <script src="JS/swiper.js"></script>
+    
 	</head>
 
 	<!--Here is the body-->
@@ -34,7 +38,7 @@
                                
                 <div class="navbar-collapse collapse">
                     <ul class="nav">
-                        <li class="left active"><a href="explore.php">EXPLORE</a></li>
+                        <li class="left active"><a href="#explore">EXPLORE</a></li>
                         <li class="left"><a href="#">MY TRAVEL</a></li>
                         <li class="left"><a href="#app">APP</a></li>
                         <li class="left"><a href="#aboutus">ABOUT US</a></li>                    
@@ -84,66 +88,7 @@
 
     <!--Here is the content-->
     <div class="content">
-    <!--Here is the first swipper to display sample of diary -->
-        <div  class="container">
-    <!-- Swiper -->
-                <div class="swiper-container swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img class="img-responsive center" src="img/sample.jpg" alt="test1"/></div>
-                        <div class="swiper-slide"><img class="img-responsive center" src="img/Topadvertising.jpg" alt="test1"/></div>
-                        <div class="swiper-slide"><img class="img-responsive center" src="img/Topadvertising3.jpg" alt="test1"/></div>
-                    </div>
-    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-    <!-- Add Arrows -->
-                    <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
-               </div>
-    <!--buttons-->
-                <div class="button center">
-                    <p class="tcenter"><a href="design.php" class="btn"><span id="start-icon" class="glyphicon glyphicon-edit"></span>Start Your Diary</a>
-                    </p>
-                </div>
-            </div>
-   
-        
-    
-    <!--Here is popular works display container
-        <div id="popular-works" class="container white">
-            <div class="diary-display">
-                <div class="photo">
-                    <img class="img-responsive" src="img/test-photo.jpg" alt="placeholder">
-                </div>
-                <div class="diary">
-                    <div class="location">
-                        <p>
-                            <span class="glyphicon glyphicon-map-marker"></span>
-                            <span>Locatoin</span>
-                        </p>
-                    </div>                    
-                    <div class="title">
-                        <p>Title: <span>My First Trip at Thailand</span></p>
-                    </div>
-                    
-                    <div class="author-date">
-                        <p>By:<span>Amy</span>Date:<span>2017-05-23</span></p>
-                    </div>
-                    
-                    <div class="text">
-                        <p>For our last two night.......</p>
-                    </div>                
-                </div>                           
-            </div>
-
-            <div class="vote-like">
-                    <p>
-                        <a href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                        <a href="#"><span>369</span>Like</a>
-                        <a href="#"><span class="glyphicon glyphicon-share"></span></a>   
-                    </p>  
-            </div>
-        </div>-->
-
-    <!--Here is test popular works display container-->
+        <!--Here is test popular works display container-->
         <?php
         header("Content-Type: text/html; charset=utf8");
         include('Connect.php');
@@ -185,48 +130,32 @@
 
             <div class="vote-like">
                     <p>
+                        <span class="glyphicon glyphicon-heart vote-heart"></span>
+                        
                         <a href="#"><span class="glyphicon glyphicon-heart"></span></a>
                         <span><?php echo $popular1[popular];?></span>Like
                         <a href="#"><span class="glyphicon glyphicon-share"></span></a>   
                     </p>  
             </div>
+            
+            <div id="vote-like-confirm" class="modal">
+                <form class="modal-content animate"  action="#" method="post">
+                    <p class="tcenter">Cool! You have voted it.</p>
+                    <input id="vote-input" type="hidden" value="photoID">
+                    <p class="tcenter"><input class="btn tcenter" type="submit" value="Done"></p>
+                </form>
+            </div>
+            
+            
+            
         </div>
         <?php
         }
         ?>
+        
 
-    <!--Here is the first display container-->
-        <div id="step1" class="container green">
-            <p>
-                <img class="img-responsive center" src="img/step1.png" alt="Step 1 choose your location"/>
-            </p>
-        </div>
     
-    <!--Here is the second display container-->
-        <div id="step2" class="container white">               
-                <p>
-                    <img class="img-responsive center" src="img/step2.png" alt="Step 2 Upload your pictures"/>
-                </p>
-            </div>
-    <!--Here is the third display container-->
-        <div id="step3" class="container green center">
-                
-                <p class="tcenter">
-                    <img class="img-responsive center" src="img/step3.png" alt="Step 3 My Blog Post"/>
-                </p>
-                <!--buttons-->
-                <div class="button center">
-                    <p class="tcenter"><a href="design.php" class="btn"><span class="glyphicon glyphicon-edit start-icon"></span>Start Your Diary</a>
-                    </p>
-                </div>
-            </div>
     
-    <!--Here is the fourth display container-->
-        <div id="app" class="container white">
-                <p class="tcenter">
-                    <img class="img-responsive center" src="img/advertisinglastpicture.png" alt="app promotion picture"/>
-                </p>
-        </div>
     </div>
     <!--Here is the footer-->
     
@@ -236,29 +165,6 @@
         </div>
     </div>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            slidesPerView: 1,
-            paginationClickable: true,
-            spaceBetween: 30,
-            loop: true
-        });
-    </script>
-        
-    <script>
-    //get the modal
-        var modal = document.getElementById('userlogin');
-    //when the user clicks anywhere out side the modal, close it
-        window.onclick = function(event){
-            if (event.target == modal){
-            modal.style.display = "none";
-        }
-    }
-    </script>
-
+    
 	</body>
 </html>
