@@ -131,31 +131,38 @@
             <div class="vote-like">
                     <p>
                         <span class="glyphicon glyphicon-heart vote-heart"></span>
-                        
-                        <a href="#"><span class="glyphicon glyphicon-heart"></span></a>
                         <span><?php echo $popular1[popular];?></span>Like
                         <a href="#"><span class="glyphicon glyphicon-share"></span></a>   
                     </p>  
             </div>
+
+            <script>
+            $(document).ready(function(){
+                $(".photo img").click(function(){
+                    var photoId = $(this).attr("id");
+                    $("#vote-input").attr("value", photoId);
+                    $("#vote-like-confirm").show();
+                });
+
+                $("#closediv").click(function(){
+                    $("#vote-like-confirm").hide();
+                });
+            });
+            
+            </script>
             
             <div id="vote-like-confirm" class="modal">
                 <form class="modal-content animate"  action="#" method="post">
-                    <p class="tcenter">Cool! You have voted it.</p>
-                    <input id="vote-input" type="hidden" value="photoID">
-                    <p class="tcenter"><input class="btn tcenter" type="submit" value="Done"></p>
+                    <p class="tcenter">Like it? Vote it!</p>
+                    <input id="vote-input" value="photoID">
+                    <p class="tcenter"><input class="btn tcenter" type="submit" value="Yes">&nbsp;&nbsp;&nbsp;<input id="closediv" type="button" class="btn tcenter" value="No"></p>
                 </form>
-            </div>
-            
-            
-            
+            </div>            
         </div>
         <?php
         }
         ?>
-        
-
-    
-    
+   
     </div>
     <!--Here is the footer-->
     

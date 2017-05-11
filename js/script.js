@@ -8,10 +8,10 @@
 });*/
 
 
-$(document).ready(function(){
+/*$(document).ready(function(){
     $(".photo img").click(function(){
         $("#vote-like-confirm").show();
     });
-});
+});*/
 
 
