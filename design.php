@@ -88,8 +88,9 @@
     <div class="content">
         
 <!--*****The form starts here*******-->
-        <form>
+        
     <!--Here is the Step1 container-->
+
             <div id="step1" class="container green">
                 <div class="design-outside">
                     <h3 class="tcenter">1. Choose Location</h3>
@@ -109,7 +110,7 @@
 
 
         <!--Here is the Step2 container-->
-
+            <form action="upload.php" method="post" enctype="multipart/form-data">
             <div id="step2" class="container white">
                 <div class="design-outside">
                     <h3 class="tcenter">2. Upload Your Pictures</h3>
@@ -120,9 +121,8 @@
 
                         <div class="design-area">
                             <img id="upload-img" class="img-responsive center" src="img/upload%20image.png" alt="upload photo"/>
-                            <p class="tcenter"><button class="btn" type="submit" name="signup">Upload</button></p>
-
-
+                            <input type="file" name="file" id="file" /> 
+                            <p class="tcenter"><input class="btn" type="submit" name="submit" value="Upload" /></p>
                         </div>              
                     </div>
                     <div class="stepbar"><p class="tcenter">
@@ -130,6 +130,8 @@
                     </div>      
                 </div>
             </div>
+            </form>
+
 
 
 
@@ -156,7 +158,6 @@
 
                 </div>
             </div>
-        </form>
 <!--*****The form ends here*******-->
     
     
