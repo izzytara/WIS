@@ -1,4 +1,5 @@
 <?php
+header("Content-Type: text/html; charset=utf8");
 if ((($_FILES["file"]["type"] == "image/gif")
 || ($_FILES["file"]["type"] == "image/jpeg")
 || ($_FILES["file"]["type"] == "image/jpg")
@@ -19,13 +20,37 @@ if ((($_FILES["file"]["type"] == "image/gif")
       {
       echo "<script>alert('This img already exists!');history.go(-1);</script>";
       }
-    else//If success
+    else//If upload image success
       {
-      move_uploaded_file($_FILES["file"]["tmp_name"],
-      "storyimg/" . $_FILES["file"]["name"]);
+      move_uploaded_file($_FILES["file"]["tmp_name"], "storyimg/" . $_FILES["file"]["name"]);
       session_start();
-      $_SESSION['imgurl'] = "storyimg/". $_FILES["file"]["name"];
-      echo "<script>alert('Upload success!');history.go(-1);</script>";
+      include('Connect.php');
+      if($_SESSION['auth']){
+        $uname = $_SESSION['Username'];
+        $findidbyname = "SELECT uid FROM travel_user WHERE uname= '$uname'";
+        $uidres = mysqli_query($connect, $findidbyname);
+        $uid1 = mysqli_fetch_assoc($uidres);
+        $uid = $uid1[uid];
+      }else{
+        $uid = null;
+      }        
+      $update_time = date("Y-m-d");
+      $location = $_POST["location"];
+      $title = $_POST["title"];
+      $story = $_POST["story"];
+      $image_URL = "storyimg/". $_FILES["file"]["name"];
+      $pupular = 0;
+      $sql = "INSERT INTO travel_story(storyid,uid,update_time,location,title,story,image_URL,popular) VALUES (NULL,'$uid','$update_time','$location','$title','$story','$image_URL','$pupular')";
+      $res = mysqli_query($connect, $sql);
+      if($res){
+        echo "<script>alert('Success Save this story');</script>";
+        $index = "https://infs3202-d1sr7.uqcloud.net/";  
+        echo "<script type='text/javascript'>";  
+        echo "window.location.href='$index'";  
+        echo "</script>";  
+      }else{
+        echo "Somthing ERROR, Try again later";
+      }
       }
     }
   }
@@ -33,4 +58,5 @@ else
   {
   echo "Invalid file";
   }
+
 ?>

@@ -33,7 +33,7 @@ function myMap() {
                     district_without.splice(-1);
                     currentLocation = district_without.join(' ');
                     console.log(currentLocation);
-                    $('input[name=address]').attr('value', currentLocation);
+                    $('#location').attr('value', currentLocation);
                 } else {
                     window.alert('No results found'); //Error check
                 }

@@ -92,7 +92,7 @@
 <!--*****The form starts here*******-->
         
     <!--Here is the Step1 container-->
-    
+    <form action="upload.php" method="post" enctype="multipart/form-data">
             <div id="step1" class="container green">
                 <div class="design-outside">
                     <h3 class="tcenter">1. Choose Location</h3>
@@ -102,6 +102,8 @@
                         <div id="map" class="design-area"></div>
                         <!--map api-->
                         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAM4uETuyFU5KzjRyn1-aZYy-xnH6jJwzg&callback=myMap" type="text/javascript"></script>
+                        <!--Get location POST-->
+                        <input id="location" name="location" style="color:black" type="hidden">
                         
                     </div>
                     <div class="stepbar"><p class="tcenter">
@@ -113,7 +115,7 @@
 
 
         <!--Here is the Step2 container-->
-            <form action="upload.php" method="post" enctype="multipart/form-data">
+            
             <div id="step2" class="container white">
                 <div class="design-outside">
                     <h3 class="tcenter">2. Upload Your Pictures</h3>
@@ -126,7 +128,6 @@
                             <img id="upload-img" class="img-responsive center" src="img/upload%20image.png" alt="upload photo"/>
                             <!--这边调整css-->
                             <input type="file" name="file" id="file" /> 
-                            <p class="tcenter"><input class="btn" type="submit" name="submit" value="Upload" /></p>
                         </div>              
                     </div>
                     <div class="stepbar"><p class="tcenter">
@@ -134,7 +135,7 @@
                     </div>      
                 </div>
             </div>
-            </form>
+            
 
 
 
@@ -149,9 +150,9 @@
 
                         </div>
                         <div class="design-area textarea">
-                            <textarea class="center" rows="1" cols="60" placeholder="Write your title here." required></textarea>
+                            <textarea class="center" rows="1" cols="60" name="title"placeholder="Write your title here." required></textarea>
                             <br>
-                            <textarea class="center" rows="11" cols="60" placeholder="Write in your journal here." required></textarea>
+                            <textarea class="center" rows="11" cols="60" name="story" placeholder="Write in your journal here." required></textarea>
                             <p class="tcenter"><button class="btn" type="submit" name="signup">Done</button></p>
                         </div>
 
@@ -162,6 +163,7 @@
 
                 </div>
             </div>
+    </form>
 <!--*****The form ends here*******-->
     
     
