@@ -21,8 +21,7 @@ if ((($_FILES["file"]["type"] == "image/gif")
       {
       echo "<script>alert('This img already exists!');history.go(-1);</script>";
       }
-    else//If upload image success
-      {
+    else{
       move_uploaded_file($_FILES["file"]["tmp_name"], "storyimg/" . $_FILES["file"]["name"]);
       session_start();
       include('Connect.php');//Connect DB
@@ -32,28 +31,45 @@ if ((($_FILES["file"]["type"] == "image/gif")
         $uidres = mysqli_query($connect, $findidbyname);
         $uid1 = mysqli_fetch_assoc($uidres);
         $uid = $uid1[uid];
-      }else{//If not logged in
-        $uid = null;
-      }        
-      $update_time = date("Y-m-d");//Get current time
-      $location = $_POST["location"];
-      $title = $_POST["title"];
-      $story = $_POST["story"];
-      $image_URL = "storyimg/". $_FILES["file"]["name"];//Get img stored URL
-      $pupular = 0;
-      $sql = "INSERT INTO travel_story(storyid,uid,update_time,location,title,story,image_URL,popular) VALUES (NULL,'$uid','$update_time','$location','$title','$story','$image_URL','$pupular')";
-      $res = mysqli_query($connect, $sql);
-      if($res){//If save success
-        echo "<script>alert('Success Save this story');</script>";
-        $index = "https://infs3202-d1sr7.uqcloud.net/";  
-        echo "<script type='text/javascript'>";  
-        echo "window.location.href='$index'";  
-        echo "</script>";  
-      }else{
-        echo "Somthing ERROR, Try again later";
-      }
-      }
+        $update_time = date("Y-m-d");//Get current time
+        $location = $_POST["location"];
+        $title = $_POST["title"];
+        $story = $_POST["story"];
+        $image_URL = "storyimg/". $_FILES["file"]["name"];//Get img stored URL
+        $pupular = 0;
+        $sql = "INSERT INTO travel_story(storyid,uid,update_time,location,title,story,image_URL,popular) VALUES (NULL,'$uid','$update_time','$location','$title','$story','$image_URL','$pupular')";
+        $res = mysqli_query($connect, $sql);
+        if($res){//If save success
+          echo "<script>alert('Success Save this story');</script>";
+          $index = "https://infs3202-d1sr7.uqcloud.net/";  
+          echo "<script type='text/javascript'>";  
+          echo "window.location.href='$index'";  
+          echo "</script>";  
+        }else{
+          echo "Somthing ERROR, Try again later";
+        }
+      }elseif(!$_SESSION['auth']){
+        $update_time = date("Y-m-d");//Get current time
+        $location = $_POST["location"];
+        $title = $_POST["title"];
+        $story = $_POST["story"];
+        $image_URL = "storyimg/". $_FILES["file"]["name"];//Get img stored URL
+        $pupular = 0;
+        $sql = "INSERT INTO travel_story(storyid,uid,update_time,location,title,story,image_URL,popular) VALUES (NULL,NULL,'$update_time','$location','$title','$story','$image_URL','$pupular')";
+        $res = mysqli_query($connect, $sql);
+        if($res){//If save success
+          echo "<script>alert('Success Save this story');</script>";
+          $index = "https://infs3202-d1sr7.uqcloud.net/";  
+          echo "<script type='text/javascript'>";  
+          echo "window.location.href='$index'";  
+          echo "</script>";  
+        }else{
+          echo "Somthing ERROR, Try again later";
+        }
+      }  
+
     }
+  }
   }
 else//If get file error
   {

@@ -120,7 +120,7 @@
                     $nameres1 = mysqli_fetch_assoc($nameres);
                     ?>
                     <div class="author-date">
-                        <p>By:&nbsp;<span><?php echo $nameres1[uname];?></span>&nbsp;Date: <span><?php echo $popular1[update_time];?></span></p>
+                        <p>By:&nbsp;<span><?php if($nameres1[uname]){echo $nameres1[uname];}elseif($nameres1[uname] == null){echo "****";}?></span>&nbsp;Date: <span><?php echo $popular1[update_time];?></span></p>
                     </div>
                     
                     <div class="text">
