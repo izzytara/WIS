@@ -135,8 +135,13 @@
                         <a href="#"><span class="glyphicon glyphicon-share"></span></a>   
                     </p>  
             </div>
+        </div>
+        <?php
+        }
+        ?>
 
-            <script>
+        <!--Get image id-->
+        <script>
             $(document).ready(function(){
                 $(".photo img").click(function(){
                     var photoId = $(this).attr("id");
@@ -151,18 +156,34 @@
             
             </script>
             
+            <!--Like div-->
             <div id="vote-like-confirm" class="modal">
-                <form class="modal-content animate"  action="#" method="post">
+                <form class="modal-content animate" name="vote_sys" method="post">
                     <p class="tcenter">Like it? Vote it!</p>
-                    <input id="vote-input" value="photoID">
-                    <p class="tcenter"><input class="btn tcenter" type="submit" value="Yes">&nbsp;&nbsp;&nbsp;<input id="closediv" type="button" class="btn tcenter" value="No"></p>
+                    <input id="vote-input" name="story_id" value="photoID">
+                    <p class="tcenter"><input class="btn tcenter" type="button" onclick="voteimg()" value="Yes">&nbsp;&nbsp;&nbsp;<input id="closediv" type="button" class="btn tcenter" value="No"></p>
                 </form>
-            </div>            
-        </div>
-        <?php
-        }
-        ?>
-   
+            </div>
+
+            <!--Ajax to action vote.php-->
+            <script>
+            function voteimg(){
+                var url = "/vote.php";
+                var msg = document.getElementById("msg");
+                var f = document.vote_sys;
+                var storyid = f.story_id.value;
+                console.log(storyid);
+                $.ajax({
+                    type:"POST",
+                    url:url,
+                    data: {storyid:storyid},
+                    success:function(msg){
+                        alert(msg);
+                        history.go(0);
+                    }
+                });
+            }
+            </script>   
     </div>
     <!--Here is the footer-->
     
