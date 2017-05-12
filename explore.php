@@ -156,11 +156,11 @@
             
             </script>
             
-            <!--Like div-->
+            <!--Like div  位置要移动-->
             <div id="vote-like-confirm" class="modal">
                 <form class="modal-content animate" name="vote_sys" method="post">
                     <p class="tcenter">Like it? Vote it!</p>
-                    <input id="vote-input" name="story_id" value="photoID">
+                    <input id="vote-input" name="story_id" type="hidden" value="photoID">
                     <p class="tcenter"><input class="btn tcenter" type="button" onclick="voteimg()" value="Yes">&nbsp;&nbsp;&nbsp;<input id="closediv" type="button" class="btn tcenter" value="No"></p>
                 </form>
             </div>
