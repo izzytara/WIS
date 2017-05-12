@@ -1,19 +1,9 @@
 /*------
 Base styles
 ---------*/
-@font-face {
-
-font-family: Agency FB;
-
-src: url("http://uncutbeatz.com/clear/fonts/AGENCYR.TTF.ttf") format("truetype");
-
-font-style:normal;
-
-}
 
 body {
-    font-family: Agency-FB;
-
+    font-family: 'Asap', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #b8d6e7;
@@ -38,6 +28,7 @@ p {
 }
 
 a:link {
+    font-family: 'Asap', sans-serif;
 
 }
 
@@ -92,6 +83,7 @@ Layout syles
 }
 
 .content {
+    font-family: 'Asap', sans-serif;
     padding: 10em 1.25em;
     background-color: #b8d6e7;
    

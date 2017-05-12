@@ -7,7 +7,8 @@
     <title>Travel Diary</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/design.css">
-        
+    <!-- Link Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="css/swiper.css">

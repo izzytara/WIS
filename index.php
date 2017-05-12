@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Diary</title>
     <link rel="stylesheet" href="css/main.css">
+    <!-- Link Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="css/swiper.css">
