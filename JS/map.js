@@ -28,6 +28,7 @@ function myMap() {
             if (status == google.maps.GeocoderStatus.OK) {
                 if (results[0]) {
                     // Restrict address to be only disrict and state
+                    console.log(results);
                     var district = results[0].formatted_address.split(',');
                     var district_without = district[1].split(' ');
                     district_without.splice(-1);
