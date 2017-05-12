@@ -39,7 +39,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav">
                         <li class="left active"><a href="explore.php">EXPLORE</a></li>
-                        <li class="left"><a href="#">MY TRAVEL</a></li>
+                        <li class="left"><a href="mytrip.php">MY TRAVEL</a></li>
                         <li class="left"><a href="#app">APP</a></li>
                         <li class="left"><a href="#aboutus">ABOUT US</a></li>                    
                         <li class="right"><a href="#">LANGUAGE</a></li>

@@ -72,6 +72,8 @@ Layout syles
     color:black;
 }
 .nav-bar {
+    margin-bottom: 5em;
+    height: auto;
     color: #888F91;
     background-color: #fff;
     padding: 0;
@@ -80,13 +82,13 @@ Layout syles
     width: 100%;
     z-index: 9999
     
+    
 }
 
 .content {
     font-family: 'Asap', sans-serif;
     padding: 10em 1.25em;
     background-color: #b8d6e7;
-   
     margin-top: 5em;
 }
 
@@ -167,8 +169,9 @@ Nav-bar
   padding: 0;
 }
 .navbar-brand>img {
-  height: 130%;
+  height: 120%;
   width: auto;
+  vertical-align: middle;
 }
 
 
@@ -213,7 +216,6 @@ input[type=text],input[type=password]{
     margin: .5em 3em;
 }
 
-
 .modal {
     display: none; /*hidden by defaulty*/
     position: fixed; 
@@ -225,12 +227,14 @@ input[type=text],input[type=password]{
     overflow: auto; /*enable scroll if needed*/
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
-    padding-top: 5em;    
+    padding-top: 5em; 
+    
 }
 
 .modal-content {
     max-width: 40em;
-    margin: auto;
+    margin: 5em auto;
+    
 }
 
 .close {
@@ -447,14 +451,29 @@ design
     margin: 0 auto;
     
 }
+/*------------------
+Mytrip-timeline
+-------------------*/
+#timeline{
+    width:50em;
+}
+#timeline img{
+    width:45em;
+    height:30em;
+}
+
+.popup-window .modal-content{
+    max-width: 20em;
+    height: auto;
+    padding: 2em 0 0 0;
+}
 
 
 
 
 
 
-
-/* --------------------
+/*--------------------
 Wide styles
 -----------------------*/
 @media (min-width: 42em) {
