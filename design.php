@@ -18,7 +18,8 @@
     <!-- Link Bootstrap's js -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Link Siper's js-->
-    <script src="JS/swiper.js"></script>
+    <script type="text/javascript" src="js/swiper.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
 	</head>
 
 	<!--Here is the body-->
@@ -90,16 +91,17 @@
 <!--*****The form starts here*******-->
         
     <!--Here is the Step1 container-->
-
+    
             <div id="step1" class="container green">
                 <div class="design-outside">
                     <h3 class="tcenter">1. Choose Location</h3>
                     <div class="design-inside center">
 
                         <div class="step-instruct"><p class="tcenter">Please chick you current location from the Google Map</p></div>
-                        <div class="design-area">
-                            <img class="img-responsive center" src="img/location.png" alt="google map"/>
-                        </div>
+                        <div id="map" class="design-area"></div>
+                        <!--map api-->
+                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAM4uETuyFU5KzjRyn1-aZYy-xnH6jJwzg&callback=myMap" type="text/javascript"></script>
+                        
                     </div>
                     <div class="stepbar"><p class="tcenter">
                         <img class="img-responsive center" src="img/step1nav.png" alt="step1 nav progress bar"/></p>
