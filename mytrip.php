@@ -83,6 +83,10 @@
         </div>
 
     <!--Here is the content-->
+    <?php
+    if($_SESSION['auth']){
+    ?>
+    <!--If log in-->
     <div class="content">
         <h2 class="tcenter">My Travel</h2>
         
@@ -92,22 +96,21 @@
                 <div id="timeline" class="swiper-container swiper">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
+                            <?php
+                            header("Content-Type: text/html; charset=utf8");
+                            $uname = $_SESSION['Username'];
+                            include('Connect.php');
+                            $timelinesql = "SELECT * FROM travel_story WHERE uid = (SELECT uid FROM travel_user WHERE uname = '$uname') order by `update_time` DESC";
+                            $timelinres = mysqli_query($connect, $timelinesql);
+                            while($timeline = mysqli_fetch_assoc($timelinres)){
+                            ?>
                             <div class="swiper-slide">
-                                <p class="tcenter"><span>2017.05.12</span>&nbsp&nbsp<span class="glyphicon glyphicon-map-marker"></span><span>St Lucia</span></p>
-                                <img id="1" class="img-responsive center" src="img/test-photo.jpg" alt="test1"/>
+                                <p class="tcenter"><span><?php echo $timeline[update_time];?></span>&nbsp&nbsp<span class="glyphicon glyphicon-map-marker"></span><span><?php echo $timeline[location];?></span></p>
+                                <img id="<?php echo $timeline[storyid];?>" class="img-responsive center" src="<?php echo $timeline[image_URL];?>" alt="test1"/>
                             </div> 
-                            <div class="swiper-slide">
-                                <p class="tcenter"><span>2017.05.12</span>&nbsp&nbsp<span class="glyphicon glyphicon-map-marker"></span><span>St Lucia</span></p>
-                                <img id="2" class="img-responsive center" src="img/test-photo.jpg" alt="test1"/>
-                            </div> 
-                            <div class="swiper-slide">
-                                <p class="tcenter"><span>2017.05.12</span>&nbsp&nbsp<span class="glyphicon glyphicon-map-marker"></span><span>St Lucia</span></p>
-                                <img class="img-responsive center" src="img/test-photo.jpg" alt="test1"/>
-                            </div> 
-                            <div class="swiper-slide">
-                                <p class="tcenter"><span>2017.05.12</span>&nbsp&nbsp<span class="glyphicon glyphicon-map-marker"></span><span>St Lucia</span></p>
-                                <img class="img-responsive center" src="img/test-photo.jpg" alt="test1"/>
-                            </div>                                 
+                            <?php
+                            }
+                            ?>                          
                         </div>
         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
@@ -123,16 +126,22 @@
             
         </div>
         <div class="popup-window">
-                <div id="timeline-edit" class="modal">
-                    <form class="modal-content animate" name="deletePhoto" method="post">
-                        <p class="tcenter">Do you want to delete it?</p>
-                        <input id="photo-delete" name="p_id" type="hidden" value="photoID">
-                        <p class="tcenter"><input class="btn tcenter" type="button" onclick="voteim()" value="Yes">&nbsp;&nbsp;&nbsp;<input id="closediv" type="button" class="btn tcenter" value="No"></p>
-                    </form>
-                </div>
+            <div id="timeline-edit" class="modal">
+                <form class="modal-content animate" name="deletePhoto" method="post">
+                    <p class="tcenter">Do you want to delete it?</p>
+                    <input id="photo-delete" name="p_id" type="hidden" value="photoID">
+                    <p class="tcenter"><input class="btn tcenter" type="button" onclick="voteim()" value="Yes">&nbsp;&nbsp;&nbsp;<input id="closediv" type="button" class="btn tcenter" value="No"></p>
+                </form>
             </div>
-        <div><p class="tcenter">Login to record your own memory!</p></div>
-    
+        </div>
+        <?php
+        }else{
+        ?>
+        <!--If not log in  这个改一下css！！-->
+        <div class="content"><div><p class="tcenter">Login to record your own memory!</p></div></div>
+        <?php
+        }
+        ?>
         
         <script>
             $(document).ready(function(){
