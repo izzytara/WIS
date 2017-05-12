@@ -127,10 +127,10 @@
         </div>
         <div class="popup-window">
             <div id="timeline-edit" class="modal">
-                <form class="modal-content animate" name="deletePhoto" method="post">
+                <form class="modal-content animate" name="deletePhoto" action="delete.php" method="post">
                     <p class="tcenter">Do you want to delete it?</p>
                     <input id="photo-delete" name="p_id" type="hidden" value="photoID">
-                    <p class="tcenter"><input class="btn tcenter" type="button" onclick="voteim()" value="Yes">&nbsp;&nbsp;&nbsp;<input id="closediv" type="button" class="btn tcenter" value="No"></p>
+                    <p class="tcenter"><input class="btn tcenter" type="submit" name="yes" value="Yes">&nbsp;&nbsp;&nbsp;<input id="closediv" type="submit" class="btn tcenter" value="No"></p>
                 </form>
             </div>
         </div>
