@@ -98,7 +98,7 @@
         while($popular1 = mysqli_fetch_assoc($popularres)){
         ?>
         <!--Get All stroies, sorted by popular-->
-        <div id="popular-works" class="container white">
+        <div id="popular-works" class="container white popular-container">
             <div class="diary-display">
                 <div class="photo">
                     <img class="img-responsive" src="<?php echo $popular1[image_URL];?>" id="<?php echo $popular1[storyid];?>" alt="placeholder">
@@ -111,7 +111,7 @@
                         </p>
                     </div>                    
                     <div class="title">
-                        <p>Title: <span><?php echo $popular1[title];?></span></p>
+                        <h5>Title: <span><?php echo $popular1[title];?></span></h5>
                     </div>
                     <!--Get author name from uid-->
                     <?php

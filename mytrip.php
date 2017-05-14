@@ -105,7 +105,7 @@
                             while($timeline = mysqli_fetch_assoc($timelinres)){
                             ?>
                             <div class="swiper-slide">
-                                <p class="tcenter"><span><?php echo $timeline[update_time];?></span>&nbsp&nbsp<span class="glyphicon glyphicon-map-marker"></span><span><?php echo $timeline[location];?></span></p>
+                                <p id="line-for-timeline" class="tcenter"><span><?php echo $timeline[update_time];?></span>&nbsp&nbsp<span class="glyphicon glyphicon-map-marker"></span><span><?php echo $timeline[location];?></span></p>
                                 <img id="<?php echo $timeline[storyid];?>" class="img-responsive center" src="<?php echo $timeline[image_URL];?>" alt="test1"/>
                             </div> 
                             <?php

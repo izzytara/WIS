@@ -92,7 +92,7 @@
 <!--*****The form starts here*******-->
         
     <!--Here is the Step1 container-->
-    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <form class="d    " action="upload.php" method="post" enctype="multipart/form-data">
             <div id="step1" class="container green">
                 <div class="design-outside">
                     <h3 class="tcenter">1. Choose Location</h3>
@@ -126,8 +126,7 @@
 
                         <div class="design-area">
                             <img id="upload-img" class="img-responsive center" src="img/upload%20image.png" alt="upload photo"/>
-                            <!--这边调整css-->
-                            <input type="file" name="file" id="file" /> 
+                            <p class="tcenter"><input type="file" name="file" id="file"/></p>
                         </div>              
                     </div>
                     <div class="stepbar"><p class="tcenter">
@@ -145,14 +144,10 @@
                 <div class="design-outside">
                     <h3 class="tcenter">3. My Blog Post</h3>
                     <div class="design-inside center">
-
-                        <div class="step-instruct">
-
-                        </div>
-                        <div class="design-area textarea">
-                            <textarea class="center" rows="1" cols="60" name="title"placeholder="Write your title here." required></textarea>
+                        <div class="design-area textarea center">
+                            <textarea class="center textarea-small" rows="1" cols="60" name="title"placeholder="Write your title here." required></textarea>
                             <br>
-                            <textarea class="center" rows="11" cols="60" name="story" placeholder="Write in your journal here." required></textarea>
+                            <textarea class="center textarea-large" rows="11" cols="60" name="story" placeholder="Write in your journal here." required></textarea>
                             <p class="tcenter"><button class="btn" type="submit" name="signup">Done</button></p>
                         </div>
 
