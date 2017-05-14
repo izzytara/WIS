@@ -100,7 +100,7 @@
 <!--*****The form starts here*******-->
         
     <!--Here is the Step1 container-->
-        <form class="d    " action="upload.php" method="post" enctype="multipart/form-data">
+        <form class="design-form" action="upload.php" method="post" enctype="multipart/form-data">
             <div id="step1" class="container green">
                 <div class="design-outside">
                     <h3 class="tcenter">1. Choose Location</h3>

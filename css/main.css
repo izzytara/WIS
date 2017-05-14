@@ -408,7 +408,7 @@
     Start to design diary styles
     -----------------------*/
 
-    .design-form{
+    .design-form {
         border: none;
     }
     .progress-bar{
@@ -458,6 +458,7 @@
     }
 
     .textarea{
+        margin: 3em 0;
         color: black;
     }
 
@@ -987,7 +988,7 @@ and (orientation: portrait) {
     /* --------------------
     Start to design diary styles
     -----------------------*/
-    .design-form{
+    .design-form {
 	   border: none;
     }
     
