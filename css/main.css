@@ -54,7 +54,6 @@
     ----------------------*/
     .nav-bar {
         font-family: 'Asap', sans-serif;
-        margin-bottom: 5em;
         height: auto;
         color: #888F91;
         background-color: #fff;
@@ -74,6 +73,7 @@
 
     .footer {
         font-family: 'Asap', sans-serif;
+        height: 5em;
         color: #888F91;
         background-color: #fff;
         text-align: center;
@@ -124,42 +124,43 @@
     .nav {
         margin: 0;
         padding: 0;
-        list-style: none;
-    }
-
-    .nav li {
-        display: inline;
-        margin: 0;
-        font-size: 1.15em; 
+        
     }
 
     .nav a {
         font-family: 'Asap', sans-serif;
+        font-size: 1.15em;
         display:inline-block;
         padding: .7em 1.25em;
         color: #888F91;
         text-decoration: none;
-        border-bottom: 1px solid gray;
     }
+    
 
     .nav a:link {
 
     }
 
-    .nav a:visited {
+    .topnav a:visited {
 
     }
 
-    .nav a:focus{
+    .topnav a:focus{
 
     }
 
-    .nav a:hover {
+    .topnav a:hover {
 
     }
 
-    .nav a:active {
+    .topnav a:active {
 
+    }
+    
+    
+    
+    .topnav .navicon {
+        display: none;
     }
 
     /*-------Logo img on nav-bar --------*/
@@ -396,6 +397,12 @@
     .vote-like span{
         margin: .25em 1em;
     }
+    
+    #vote-like-confirm .modal-content{
+        max-width: 20em;
+        height: auto;
+        padding: 2em 0 0 0;
+    }
 
     /* --------------------
     Start to design diary styles
@@ -514,44 +521,37 @@
         height: auto;
         padding: 2em 0 0 0;
     }
-    #line-for-timeline:before, #line-for-timeline:after {
+    
+    #line-for-timeline{
+        font-size: 1.2em;
+    }
+    
+    #line-for-timeline:after {
         content:"";
         display: inline-block;
         height: 0.5em;
-        vertical-align: bottom;
+        vertical-align: middle;
         width: 100%;
         margin-right: -100%;
-        margin-left: 10px;
-        border-top: 1px solid black;
+        margin-left: 0.75;
+        border-top: 2px solid #01b6c6;
+    }
+    
+    #line-for-timeline:before {
+        content:"";
+        display: inline-block;
+        height: 0.5em;
+        vertical-align: middle;
+        width: 100%;
+        margin-right: 0.75em;
+        margin-left: -100%;
+        border-top: 2px solid #01b6c6;
     }
 
-    #line-for-timeline{
-        border: 1px solid black;
-    }
+
 }
 
 
-/*--------------------
-Wide styles
------------------------
-@media (min-width: 42em) {
-    .header {padding: 1.5em 3em;}
-    .nav-bar {padding: 1em 3em;}
-    /*.content {padding: 2em 3em;}
-    .footer {padding: 2em 3em;}
-
-  .nav li{
-      display: inline;
-      margin: 0 1em 0 0;
-  }
-
-  .nav a{
-      display: inline;
-      padding: 0;
-      border-bottom: 0;
-  }
-
-} */
 
 
 @media screen 
@@ -682,46 +682,69 @@ and (orientation: portrait) {
     /* --------------------
     Nav-bar
     -----------------------*/
-    .nav {
+    
+    .topnav {
         margin: 0;
         padding: 0;
-        list-style: none;
+        
     }
 
-    .nav li {
-        display: inline;
-        margin: 0;
-        font-size: 1.15em; 
-    }
-
-    .nav a {
+    .topnav a {
         font-family: 'Asap', sans-serif;
+        font-size: 1.15em;
         display:inline-block;
         padding: .7em 1.25em;
         color: #888F91;
         text-decoration: none;
-        border-bottom: 1px solid gray;
+    }
+    
+    .topnav a:not(:first-child) {display: none;}
+    
+    .topnav a.navicon {
+        float: right;
+        display: block;
+    }
+    @media screen 
+        and (min-device-width:300px) 
+        and (max-device-width:768px) 
+        and (-webkit-min-device-pixel-ratio: 2) 
+        and (orientation: portrait) {
+            .topnav.responsive {position: relative;}
+            .topnav.responsive .navicon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+                text-decoration: none;
+            }
+        }
+
+    .topnav a:link {
+
     }
 
-    .nav a:link {
+    .topnav a:visited {
 
     }
 
-    .nav a:visited {
+    .topnav a:focus{
 
     }
 
-    .nav a:focus{
+    .topnav a:hover {
 
     }
 
-    .nav a:hover {
+    .topnav a:active {
 
     }
-
-    .nav a:active {
-
-    }
+    
+    
+    
 
     /*-------Logo img on nav-bar --------*/
     .navbar-brand {
@@ -1074,12 +1097,13 @@ and (orientation: portrait) {
     Mytrip-timeline
     -------------------*/
     #timeline{
-        width:50em;
+        width:100%;
+        height: 18em;
     }
 
     #timeline img{
-        width:45em;
-        height:30em;
+        width:80%;
+        height:15em;
     }
 
     .popup-window .modal-content{
@@ -1087,21 +1111,49 @@ and (orientation: portrait) {
         height: auto;
         padding: 2em 0 0 0;
     }
-    #line-for-timeline:before, #line-for-timeline:after {
+    
+    #line-for-timeline{
+        font-size: .75em;
+    }
+    
+    #line-for-timeline:after {
         content:"";
         display: inline-block;
         height: 0.5em;
-        vertical-align: bottom;
+        vertical-align: middle;
         width: 100%;
         margin-right: -100%;
-        margin-left: 10px;
-        border-top: 1px solid black;
+        margin-left: 0.75;
+        border-top: 2px solid #01b6c6;
     }
-
-    #line-for-timeline{
-        border: 1px solid black;
+    
+    #line-for-timeline:before {
+        content:"";
+        display: inline-block;
+        height: 0.5em;
+        vertical-align: middle;
+        width: 100%;
+        margin-right: 0.75em;
+        margin-left: -100%;
+        border-top: 2px solid #01b6c6;
     }
-
 	
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .navicon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
 }
 

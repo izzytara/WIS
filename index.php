@@ -26,41 +26,52 @@
 
     <!--Here is the navigation-->
         <div class="nav-bar">
-            <div class="container">
-                
-                <p class="tcenter">
-                    <a class="navbar-brand" href="index.php">
-                        <img src="img/LOGO.png" alt="Traval Diary logo">
-                    </a>
-                </p>
-                               
-                <div class="navbar-collapse collapse">
-                    <ul class="nav">
-                        <li class="left active"><a href="explore.php">EXPLORE</a></li>
-                        <li class="left"><a href="mytrip.php">MY TRAVEL</a></li>
-                        <li class="left"><a href="#app">APP</a></li>
-                        <li class="left"><a href="#aboutus">ABOUT US</a></li>                    
-                        <li class="right"><a href="#">LANGUAGE</a></li>
-                        <li class="right">                           
+            <div class="container">               
+                <div class="topnav nav" id="myTopnav">
+                    <a class="navbar-brand" href="index.php"><img src="img/LOGO.png" alt="Traval Diary logo"></a>
+                    <a class="left" href="explore.php">EXPLORE</a>
+                    <a class="left" href="mytrip.php">MY TRAVEL</a>
+                    <a class="left" href="#app">APP</a>
+                    <a class="left" href="#aboutus">ABOUT US</a>                   
+                    <a class="right" href="#">LANGUAGE</a>
+                        <!--<li class="right"><a href="#"><span class="glyphicon glyphicon-list"></span></a> -->
+                        
                         <!--If user has not loged in-->
+                    
                         <?php
                             session_start();
                             if(!$_SESSION['auth']){
                         ?>                               
-                            <a href="#" onclick="document.getElementById('userlogin').style.display='block'">LOGIN</a>                       
+                            <a class="right" href="#" onclick="document.getElementById('userlogin').style.display='block'">LOGIN</a>                       
                         <!--If user has not loged in-->
                         <?php
                             }else if($_SESSION['auth']){
                         ?>                                      
-                            <a href="logout.php">LOGOUT</a>                                                                                 
+                            <a class="right" href="logout.php">LOGOUT</a>                                                                                 
                         <?php
                             }
                         ?>                                               
-                        </li>
-                    </ul>
+                        
+                    
+                    <a href="javascript:void(0);" style="font-size:1em;" class="navicon" onclick="myFunction()">&#9776;</a>
                 </div>
             </div>
         </div>
+    <!--JavaScript for responsive mobile navigation-->
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+
+    
+    
+    
         
     <!--Here is the login form-->
         <div id="userlogin" class="modal">
@@ -146,20 +157,20 @@
         </div>-->
 
     <!--Here is the first display container-->
-        <div id="step1" class="container green">
+        <div class="container green">
             <p>
                 <img class="img-responsive center" src="img/step1.png" alt="Step 1 choose your location"/>
             </p>
         </div>
     
     <!--Here is the second display container-->
-        <div id="step2" class="container white">               
+        <div class="container white">               
                 <p>
                     <img class="img-responsive center" src="img/step2.png" alt="Step 2 Upload your pictures"/>
                 </p>
             </div>
     <!--Here is the third display container-->
-        <div id="step3" class="container green center">
+        <div class="container green center">
                 
                 <p class="tcenter">
                     <img class="img-responsive center" src="img/step3.png" alt="Step 3 My Blog Post"/>
@@ -172,7 +183,7 @@
             </div>
     
     <!--Here is the fourth display container-->
-        <div id="app" class="container white">
+        <div class="container white">
                 <p class="tcenter">
                     <img class="img-responsive center" src="img/advertisinglastpicture.png" alt="app promotion picture"/>
                 </p>
