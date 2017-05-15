@@ -105,7 +105,7 @@
         while($popular1 = mysqli_fetch_assoc($popularres)){
         ?>
         <!--Get All stroies, sorted by popular-->
-        <div id="popular-works" class="container white popular-container">
+        <div id="popular-works" class="container white center">
             <div class="diary-display">
                 <div class="photo">
                     <img class="img-responsive" src="<?php echo $popular1[image_URL];?>" id="<?php echo $popular1[storyid];?>" alt="placeholder">
