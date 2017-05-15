@@ -5,7 +5,7 @@ if ((($_FILES["file"]["type"] == "image/gif")
 || ($_FILES["file"]["type"] == "image/jpeg")
 || ($_FILES["file"]["type"] == "image/jpg")
 || ($_FILES["file"]["type"] == "image/pjpeg"))
-&& ($_FILES["file"]["size"] < 200000))
+&& ($_FILES["file"]["size"] < 2000000))
   {
   if ($_FILES["file"]["error"] > 0)//If error
     {
