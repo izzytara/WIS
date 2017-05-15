@@ -9,7 +9,7 @@
     $update = "UPDATE travel_story SET popular = '$Num' WHERE storyid='$storyid'";
     $updateres = mysqli_query($connect, $update);
     if($updateres){
-    	echo "Vote success!";
+        echo $Num;
     }
     else{
     	echo "Error";

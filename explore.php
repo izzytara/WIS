@@ -139,7 +139,7 @@
             <div class="vote-like">
                     <p>
                         <span class="glyphicon glyphicon-heart vote-heart"></span>
-                        <span><?php echo $popular1[popular];?></span>Like
+                        <span class="<?php echo $popular1[storyid];?>"><?php echo $popular1[popular];?></span>Like
                         <a href="#"><span class="glyphicon glyphicon-share"></span></a>   
                     </p>  
             </div>
@@ -179,14 +179,16 @@
                 var msg = document.getElementById("msg");
                 var f = document.vote_sys;
                 var storyid = f.story_id.value;
+                var id = "." + storyid;
                 console.log(storyid);
+                console.log(id);
                 $.ajax({
                     type:"POST",
                     url:url,
                     data: {storyid:storyid},
                     success:function(msg){
-                        alert(msg);
-                        history.go(0);
+                        $(id).text(msg);
+                        $("#vote-like-confirm").hide();       
                     }
                 });
             }
