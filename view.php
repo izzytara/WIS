@@ -100,38 +100,40 @@
         <?php
         header("Content-Type: text/html; charset=utf8");
         include('Connect.php');
-        $popular = "SELECT * FROM travel_story order by `popular` DESC LIMIT 10;";
-        $popularres = mysqli_query($connect, $popular);
-        while($popular1 = mysqli_fetch_assoc($popularres)){
+        session_start();//Set session
+        $title = $_SESSION['thisstory'];
+        $storysql = "SELECT * FROM travel_story WHERE title = '$title'";
+        $storyres = mysqli_query($connect, $storysql);
+        if($story = mysqli_fetch_assoc($storyres)){
         ?>
         <!--Get All stroies, sorted by popular-->
         <div id="popular-works" class="container white center">
             <div class="diary-display">
                 <div class="photo">
-                    <img class="img-responsive" src="<?php echo $popular1[image_URL];?>" id="<?php echo $popular1[storyid];?>" alt="placeholder">
+                    <img class="img-responsive" src="<?php echo $story[image_URL];?>" id="<?php echo $story[storyid];?>" alt="placeholder">
                 </div>
                 <div class="diary">
                     <div class="location">
                         <p>
                             <span class="glyphicon glyphicon-map-marker"></span>
-                            <span><?php echo $popular1[location];?></span>
+                            <span><?php echo $story[location];?></span>
                         </p>
                     </div>                    
                     <div class="title">
-                        <h5>Title: <span><?php echo $popular1[title];?></span></h5>
+                        <h5>Title: <span><?php echo $story[title];?></span></h5>
                     </div>
                     <!--Get author name from uid-->
                     <?php
-                    $findunamebyuid = "SELECT uname FROM travel_user WHERE uid= '$popular1[uid]'";
+                    $findunamebyuid = "SELECT uname FROM travel_user WHERE uid= '$story[uid]'";
                     $nameres = mysqli_query($connect, $findunamebyuid);
                     $nameres1 = mysqli_fetch_assoc($nameres);
                     ?>
                     <div class="author-date">
-                        <p>By:&nbsp;<span><?php if($nameres1[uname]){echo $nameres1[uname];}elseif($nameres1[uname] == null){echo "****";}?></span>&nbsp;Date: <span><?php echo $popular1[update_time];?></span></p>
+                        <p>By:&nbsp;<span><?php if($nameres1[uname]){echo $nameres1[uname];}elseif($nameres1[uname] == null){echo "****";}?></span>&nbsp;Date: <span><?php echo $story[update_time];?></span></p>
                     </div>
                     
                     <div class="text">
-                        <p><?php echo $popular1[story];?></p>
+                        <p><?php echo $story[story];?></p>
                     </div>                
                 </div>                           
             </div>
@@ -139,7 +141,7 @@
             <div class="vote-like">
                     <p>
                         <span class="glyphicon glyphicon-heart vote-heart"></span>
-                        <span class="<?php echo $popular1[storyid];?>"><?php echo $popular1[popular];?></span>Like
+                        <span class="<?php echo $story[storyid];?>"><?php echo $story[popular];?></span>Like
                         <a href="#"><span class="glyphicon glyphicon-share"></span></a>   
                     </p>  
             </div>

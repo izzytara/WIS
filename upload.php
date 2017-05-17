@@ -40,8 +40,10 @@ if ((($_FILES["file"]["type"] == "image/gif")
         $sql = "INSERT INTO travel_story(storyid,uid,update_time,location,title,story,image_URL,popular) VALUES (NULL,'$uid','$update_time','$location','$title','$story','$image_URL','$pupular')";
         $res = mysqli_query($connect, $sql);
         if($res){//If save success
+          session_start();//Set session
+          $_SESSION['thisstory'] = "$title";
           echo "<script>alert('Success Save this story');</script>";
-          $index = "https://infs3202-d1sr7.uqcloud.net/";  
+          $index = "https://infs3202-d1sr7.uqcloud.net/view.php";  
           echo "<script type='text/javascript'>";  
           echo "window.location.href='$index'";  
           echo "</script>";  
@@ -58,8 +60,10 @@ if ((($_FILES["file"]["type"] == "image/gif")
         $sql = "INSERT INTO travel_story(storyid,uid,update_time,location,title,story,image_URL,popular) VALUES (NULL,NULL,'$update_time','$location','$title','$story','$image_URL','$pupular')";
         $res = mysqli_query($connect, $sql);
         if($res){//If save success
+          session_start();//Set session
+          $_SESSION['thisstory'] = "$title";
           echo "<script>alert('Success Save this story');</script>";
-          $index = "https://infs3202-d1sr7.uqcloud.net/";  
+          $index = "https://infs3202-d1sr7.uqcloud.net/view.php";  
           echo "<script type='text/javascript'>";  
           echo "window.location.href='$index'";  
           echo "</script>";  
