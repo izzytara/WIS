@@ -27,13 +27,13 @@
     <!--Here is the navigation-->
         <div class="nav-bar">
             <div class="container">               
-                <div class="topnav nav" id="myTopnav">
+                <div class="top-nav nav" id="myTopnav">
                     <a class="navbar-brand" href="index.php"><img src="img/LOGO.png" alt="Traval Diary logo"></a>
-                    <a class="left" href="explore.php">EXPLORE</a>
-                    <a class="left" href="mytrip.php">MY TRAVEL</a>
-                    <a class="left" href="#app">APP</a>
-                    <a class="left" href="#aboutus">ABOUT US</a>                   
-                    <a class="right" href="#">LANGUAGE</a>
+                    <a class="left" href="explore.php"><p>EXPLORE</p></a>
+                    <a class="left" href="mytrip.php"><p>MY TRAVEL</p></a>
+                    <a class="left" href="#app"><p>APP</p></a>
+                    <a class="left" href="#aboutus"><p>ABOUT US</p></a>                   
+                    <a class="right" href="#"><p>LANGUAGE</p></a>
                         <!--<li class="right"><a href="#"><span class="glyphicon glyphicon-list"></span></a> -->
                         
                         <!--If user has not loged in-->
@@ -42,12 +42,12 @@
                             session_start();
                             if(!$_SESSION['auth']){
                         ?>                               
-                            <a class="right" href="#" onclick="document.getElementById('userlogin').style.display='block'">LOGIN</a>                       
+                            <a class="right" href="#" onclick="document.getElementById('userlogin').style.display='block'"><p>LOGIN</p></a>                       
                         <!--If user has not loged in-->
                         <?php
                             }else if($_SESSION['auth']){
                         ?>                                      
-                            <a class="right" href="logout.php">LOGOUT</a>                                                                                 
+                            <a class="right" href="logout.php"><p>LOGOUT</p></a>                                                                                 
                         <?php
                             }
                         ?>                                               
@@ -57,14 +57,15 @@
                 </div>
             </div>
         </div>
+        
     <!--JavaScript for responsive mobile navigation-->
         <script>
             function myFunction() {
                 var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
+                if (x.className === "top-nav") {
                     x.className += " responsive";
                 } else {
-                    x.className = "topnav";
+                    x.className = "top-nav";
                 }
             }
         </script>
@@ -78,6 +79,7 @@
             <div class="login">
                 <form class="modal-content animate" action="login.php" method="post">
                     <h2 class="tcenter">Login</h2>
+                    <span onclick="document.getElementById('userlogin').style.display='none'" class="close" title="Close Modal">&times;</span>
 
                         <div class="loginform center">
                             <label><b>Username</b></label>
@@ -185,7 +187,7 @@
     <!--Here is the fourth display container-->
         <div class="container white">
                 <p class="tcenter">
-                    <img class="img-responsive center" src="img/advertisinglastpicture.png" alt="app promotion picture"/>
+                    <img id="app" class="img-responsive center" src="img/advertisinglastpicture.png" alt="app promotion picture"/>
                 </p>
         </div>
     </div>
