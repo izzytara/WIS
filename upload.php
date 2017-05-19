@@ -22,7 +22,10 @@ if ((($_FILES["file"]["type"] == "image/gif")
       echo "<script>alert('This img already exists!');history.go(-1);</script>";
       }
     else{
-      move_uploaded_file($_FILES["file"]["tmp_name"], "storyimg/" . $_FILES["file"]["name"]);
+      $num = rand(1,1000);
+      $filename = $num.$_FILES["file"]["name"];
+      move_uploaded_file($_FILES["file"]["tmp_name"], "storyimg/" . $filename);
+      $image_URL = "storyimg/".$filename;//Get img stored URL
       session_start();
       include('Connect.php');//Connect DB
       if($_SESSION['auth']){//Get uid if logged in
@@ -35,7 +38,6 @@ if ((($_FILES["file"]["type"] == "image/gif")
         $location = $_POST["location"];
         $title = $_POST["title"];
         $story = $_POST["story"];
-        $image_URL = "storyimg/". $_FILES["file"]["name"];//Get img stored URL
         $pupular = 0;
         $sql = "INSERT INTO travel_story(storyid,uid,update_time,location,title,story,image_URL,popular) VALUES (NULL,'$uid','$update_time','$location','$title','$story','$image_URL','$pupular')";
         $res = mysqli_query($connect, $sql);
@@ -55,7 +57,6 @@ if ((($_FILES["file"]["type"] == "image/gif")
         $location = $_POST["location"];
         $title = $_POST["title"];
         $story = $_POST["story"];
-        $image_URL = "storyimg/". $_FILES["file"]["name"];//Get img stored URL
         $pupular = 0;
         $sql = "INSERT INTO travel_story(storyid,uid,update_time,location,title,story,image_URL,popular) VALUES (NULL,NULL,'$update_time','$location','$title','$story','$image_URL','$pupular')";
         $res = mysqli_query($connect, $sql);
