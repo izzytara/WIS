@@ -56,32 +56,27 @@
     Layout syles
     ----------------------*/
     .nav-bar {
-        font-family: 'Asap', sans-serif;
+        font-family: 'Roboto', sans-serif;
         height: auto;
         color: #888F91;
         background-color: #fff;
         padding: 0;
-        position: fixed;
-        top: 0;
         width: 100%;
-        z-index: 9999;
-        overflow: hidden;
         
     }
 
-    .content {
-        font-family: 'Asap', sans-serif;
+    .content { 
         padding: 1em 1.25em;
-        margin:10em 0 0 0;
         background-color: #b8d6e7;    
     }
 
     .footer {
-        font-family: 'Asap', sans-serif;
+        font-family: 'Open Sans', sans-serif;
         height: 5em;
         color: #888F91;
         background-color: #fff;
         text-align: center;
+        margin-top: 1em;
     }
 
     .container {
@@ -129,12 +124,9 @@
     .nav {
         margin: 0;
         padding: 0;
-        
-        
     }
 
     .nav a {
-        font-family: 'Asap', sans-serif;
         display:inline-block;
         padding: .7em 1.25em;
         color: #888F91;
@@ -546,33 +538,16 @@
         border-bottom: 2px solid #01b6c6;
     }
     
-   /* #line-for-time:after {
-        content:"";
-        display: inline-block;
-        height: 1em;
-        vertical-align: middle;
-        width: 100%;
-        margin-right: -100%;
-        margin-left: 0.75;
-        border-bottom: 2px solid #01b6c6;
-        position: absolute;
-        z-index: -1;
-    }*/
+
+
+    #aboutus img{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
     
-    /*#line-for-time:before {
-        content:"";
-        display: inline-block;
-        height: 1em;
-        vertical-align: middle;
-        width: 100%;
-        margin-right: 0.75em;
-        margin-left: -100%;
-        border-bottom: 2px solid #01b6c6;
-        position: absolute;
-        z-index: -1;
-    }*/
-
-
+    
+    
 }
 
 
@@ -639,30 +614,26 @@ and (orientation: portrait) {
     Layout syles
     ----------------------*/
     .nav-bar {
-        font-family: 'Asap', sans-serif;
-        margin-bottom: 5em;
+        font-family: 'Roboto', sans-serif;
         height: auto;
         color: #888F91;
         background-color: #fff;
         padding: 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 9999        
+        width: 100%;        
     }
 
     .content {
-        font-family: 'Asap', sans-serif;
         padding: .75em 1em;
-        margin: 5em 0 0 0;
         background-color: #b8d6e7;    
     }
 
     .footer {
-        font-family: 'Asap', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        height: 3em;
         color: #888F91;
         background-color: #fff;
         text-align: center;
+        margin-top: 1em;
     }
 
     .container {
@@ -825,6 +796,8 @@ and (orientation: portrait) {
     .modal-content {
         max-width: 40em;
         margin: 5em auto; 
+        position: absolute;
+        z-index: 1;
     }
 
     .close {
@@ -1196,4 +1169,6 @@ and (orientation: portrait) {
   }
 
 }
+
+
 

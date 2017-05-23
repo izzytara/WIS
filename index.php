@@ -194,9 +194,9 @@
     <!--Here is the footer-->
     
         <div class="footer">
-        <div class="container">
+            <div class="container">
                 &copy; Copyright 2017
-        </div>
+            </div>
     </div>
 
     <!-- Initialize Swiper -->

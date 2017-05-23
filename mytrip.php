@@ -5,23 +5,22 @@
   	<meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Diary</title>
-    
+    <link rel="stylesheet" href="css/main.css">
     <!-- Link Google font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="css/swiper.css">
         
     <!-- Link Bootstrap's CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <!-- Link Bootstrap's js -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Link Siper's js-->
     <script src="js/swiper.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	</head>
+
 
 	<!--Here is the body-->
 	<body>
@@ -78,7 +77,7 @@
             <div class="login">
                 <form class="modal-content animate" action="login.php" method="post">
                     <h2 class="tcenter">Login</h2>
-                    <span onclick="document.getElementById('userlogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <span id="close" onclick="document.getElementById('userlogin').style.display='none'" class="close" title="Close Modal">&times;</span>
 
                         <div class="loginform center">
                             <label><b>Username</b></label>
@@ -103,7 +102,6 @@
     <!--If log in-->
     <div class="content">
         <h2 class="tcenter">My Travel</h2>
-        
         
         <div  class="container white">
     <!-- Swiper -->
@@ -153,7 +151,13 @@
         ?>
         
         <div class="content">
-            <div class="container white"><p class="tcenter">Login to record your own memory!</p></div>
+            <div class="container">
+                <img class="img-responsive center" src="img/login%20to%20record.jpg" alt="Loging to record your memory">
+            </div>
+            <div class="container">
+                <img class="img-responsive center" src="img/wuyuan%20sample.jpg" alt="Promotion sample image of WuYuan">
+            </div>
+            <img>
         </div>
         <?php
         }

@@ -99,15 +99,23 @@
         </div>
 
     <!--Here is the content-->
-    <div class="content">
-        <div id="aboutus" class="container"><img class="img-responsive" src="img/Team.jpg"></div>
+    <div id="aboutus" class="content">
+        <div  class="container">
+            <img class="img-responsive img1" src="img/about%20us4.jpg" alt="about us title">
+            <img class="img-responsive img2" src="img/about%20us5.jpg" alt="about us">
+        </div>
+        <div class="container">
+            <img class="img-responsive img3" src="img/about%20us1-2.jpg" alt="Yi Fengji's profile">
+            <img class="img-responsive img4" src="img/about%20us2-2.jpg" alt="Jing Zhang's profile">
+            <img class="img-responsive img5" src="img/about%20us3-2.jpg" alt="Wei Fu's profile">
+        </div>
     </div>
     <!--Here is the footer-->
     
     
         <div class="footer">
             <div class="container">
-                    &copy; Copyright 2017
+                 &copy; Copyright 2017
             </div>
         </div>
 
