@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/design.css">
     <!-- Link Google font -->
-    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="css/swiper.css">
@@ -33,8 +33,8 @@
                     <a class="navbar-brand" href="index.php"><img src="img/LOGO.png" alt="Traval Diary logo"></a>
                     <a class="left" href="explore.php"><p>EXPLORE</p></a>
                     <a class="left" href="mytrip.php"><p>MY TRAVEL</p></a>
-                    <a class="left" href="#app"><p>APP</p></a>
-                    <a class="left" href="#aboutus"><p>ABOUT US</p></a>                   
+                    <a class="left" href="index.php#app"><p>APP</p></a>
+                    <a class="left" href="about.php"><p>ABOUT US</p></a>                   
                     <a class="right" href="#"><p>LANGUAGE</p></a>
                         <!--<li class="right"><a href="#"><span class="glyphicon glyphicon-list"></span></a> -->
                         
@@ -64,12 +64,12 @@
         <script>
             function myFunction() {
                 var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
+                if (x.className === "top-nav nav") {
                     x.className += " responsive";
                 } else {
-                    x.className = "topnav";
+                    x.className = "top-nav nav";
                 }
-            }
+            }     
         </script>
         
     <!--Here is the login form-->
@@ -157,7 +157,7 @@
                             <textarea class="center textarea-small" rows="1" cols="60" name="title"placeholder="Write your title here." required></textarea>
                             <br>
                             <textarea class="center textarea-large" rows="11" cols="60" name="story" placeholder="Write in your journal here." required></textarea>
-                            <p class="tcenter"><button class="btn" type="submit" name="signup">Done</button></p>
+                            <p class="tcenter"><button class="btn" type="submit">Done</button></p>
                         </div>
 
                     </div>

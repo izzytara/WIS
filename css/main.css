@@ -5,7 +5,6 @@
     ---------*/
 
     body {
-        font-family: 'Asap', sans-serif;
         margin: 0;
         padding: 0; 
         width: 100%;
@@ -16,6 +15,7 @@
     }
 
     h1, h2, h3, h4 {
+        font-family: 'Roboto', sans-serif;
         color:#2D6662;
     }
 
@@ -28,6 +28,7 @@
     }
 
     p {
+        font-family: 'Open Sans', sans-serif;
 
     }
 
@@ -71,7 +72,7 @@
     .content {
         font-family: 'Asap', sans-serif;
         padding: 1em 1.25em;
-        margin:6em 0 0 0;
+        margin:10em 0 0 0;
         background-color: #b8d6e7;    
     }
 
@@ -367,6 +368,7 @@
         height: inherit;
         float:right;
         display: inline-block;
+        line-height: 1.5;
     }
 
     .location {
@@ -375,6 +377,7 @@
     }
 
     .title {
+        font-family: 'Roboto', sans-serif;
         padding: 0 1.25em;
         width:100%;
         display: block;
@@ -382,14 +385,19 @@
     }
 
     .author-date{
+        font-family: 'Open Sans', sans-serif;
         padding: 0 1.25em;
         display: block;
         float:left;
         font-style: italic;
-        font: blue;   
     }
+    .author-date span{
+        margin: 0 0.5em;
+    }
+    
 
     .text{
+        font-family: 'Open Sans', sans-serif;
         padding: 0 1.25em;
         width:100%;
         white-space: normal;
@@ -535,29 +543,34 @@
     
     #line-for-timeline{
         font-size: 1.2em;
+        border-bottom: 2px solid #01b6c6;
     }
     
-    #line-for-timeline:after {
+   /* #line-for-time:after {
         content:"";
         display: inline-block;
-        height: 0.5em;
+        height: 1em;
         vertical-align: middle;
         width: 100%;
         margin-right: -100%;
         margin-left: 0.75;
-        border-top: 2px solid #01b6c6;
-    }
+        border-bottom: 2px solid #01b6c6;
+        position: absolute;
+        z-index: -1;
+    }*/
     
-    #line-for-timeline:before {
+    /*#line-for-time:before {
         content:"";
         display: inline-block;
-        height: 0.5em;
+        height: 1em;
         vertical-align: middle;
         width: 100%;
         margin-right: 0.75em;
         margin-left: -100%;
-        border-top: 2px solid #01b6c6;
-    }
+        border-bottom: 2px solid #01b6c6;
+        position: absolute;
+        z-index: -1;
+    }*/
 
 
 }
@@ -585,7 +598,8 @@ and (orientation: portrait) {
     }
 
     h1, h2, h3, h4 {
-        font-family: 'Asap', sans-serif;
+        font-size: 80%;
+        font-family: 'Roboto', sans-serif;
         color:#2D6662;
     }
 
@@ -640,7 +654,7 @@ and (orientation: portrait) {
     .content {
         font-family: 'Asap', sans-serif;
         padding: .75em 1em;
-        margin: 1.5em 0 0 0;
+        margin: 5em 0 0 0;
         background-color: #b8d6e7;    
     }
 
@@ -948,6 +962,7 @@ and (orientation: portrait) {
         height: inherit;
         float:right;
         display: inline-block;
+        line-height: 1.5;
     }
     .diary h5, p{
         font-size: 50%;
@@ -959,18 +974,26 @@ and (orientation: portrait) {
     }
 
     .title {
+        font-family: 'Roboto', sans-serif;
         padding: 0 1.25em;
         width:100%;
         display: block;
         clear:both;
     }
+    .title h2{
+        font-size: 85%;
+    }
 
     .author-date{
+        font-family: 'Open Sans', sans-serif;
         padding: 0 1.25em;
         display: block;
         float:left;
         font-style: italic;
         font-size: 50%; 
+    }
+    .author-date span{
+        margin: 0 0.5em;
     }
 
     .text{
@@ -1016,7 +1039,9 @@ and (orientation: portrait) {
         position: relative;
     } 
     
-    .desgin-outside h3, p { font-size: 80%}
+    .desgin-outside h3,p { font-size: 75%}
+
+    
 
     .design-inside{
         width:100%;
@@ -1123,6 +1148,7 @@ and (orientation: portrait) {
     
     #line-for-timeline{
         font-size: .75em;
+        border-bottom: 2px solid #01b6c6;
     }
     
     #line-for-timeline:after {
@@ -1148,6 +1174,11 @@ and (orientation: portrait) {
     }
 	
 }
+
+/**************
+***about us****
+********/
+
 
 
 

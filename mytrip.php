@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Diary</title>
     
-
+    <!-- Link Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="css/swiper.css">
         
@@ -32,8 +33,8 @@
                     <a class="navbar-brand" href="index.php"><img src="img/LOGO.png" alt="Traval Diary logo"></a>
                     <a class="left" href="explore.php"><p>EXPLORE</p></a>
                     <a class="left" href="mytrip.php"><p>MY TRAVEL</p></a>
-                    <a class="left" href="#app"><p>APP</p></a>
-                    <a class="left" href="#aboutus"><p>ABOUT US</p></a>                   
+                    <a class="left" href="index.php#app"><p>APP</p></a>
+                    <a class="left" href="about.php"><p>ABOUT US</p></a>                   
                     <a class="right" href="#"><p>LANGUAGE</p></a>
                         <!--<li class="right"><a href="#"><span class="glyphicon glyphicon-list"></span></a> -->
                         
@@ -63,17 +64,17 @@
         <script>
             function myFunction() {
                 var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
+                if (x.className === "top-nav nav") {
                     x.className += " responsive";
                 } else {
-                    x.className = "topnav";
+                    x.className = "top-nav nav";
                 }
-            }
+            }     
         </script>
 
         
     <!--Here is the login form-->
-    <div id="userlogin" class="modal">
+        <div id="userlogin" class="modal">
             <div class="login">
                 <form class="modal-content animate" action="login.php" method="post">
                     <h2 class="tcenter">Login</h2>

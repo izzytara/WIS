@@ -7,7 +7,7 @@
     <title>Travel Diary</title>
     <link rel="stylesheet" href="css/main.css">
     <!-- Link Google font -->
-    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="css/swiper.css">
@@ -32,7 +32,7 @@
                     <a class="left" href="explore.php"><p>EXPLORE</p></a>
                     <a class="left" href="mytrip.php"><p>MY TRAVEL</p></a>
                     <a class="left" href="#app"><p>APP</p></a>
-                    <a class="left" href="#aboutus"><p>ABOUT US</p></a>                   
+                    <a class="left" href="about.php"><p>ABOUT US</p></a>                   
                     <a class="right" href="#"><p>LANGUAGE</p></a>
                         <!--<li class="right"><a href="#"><span class="glyphicon glyphicon-list"></span></a> -->
                         
@@ -62,12 +62,12 @@
         <script>
             function myFunction() {
                 var x = document.getElementById("myTopnav");
-                if (x.className === "top-nav") {
+                if (x.className === "top-nav nav") {
                     x.className += " responsive";
                 } else {
-                    x.className = "top-nav";
+                    x.className = "top-nav nav";
                 }
-            }
+            }     
         </script>
 
     
