@@ -103,7 +103,7 @@
         <?php
         header("Content-Type: text/html; charset=utf8");
         include('Connect.php');
-        $popular = "SELECT * FROM travel_story order by `popular`;";
+        $popular = "SELECT * FROM travel_story order by `popular` DESC;";
         $popularres = mysqli_query($connect, $popular);
         while($popular1 = mysqli_fetch_assoc($popularres)){
         ?>
