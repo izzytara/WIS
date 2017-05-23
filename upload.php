@@ -17,15 +17,15 @@ if ((($_FILES["file"]["type"] == "image/gif")
     //echo "Type: " . $_FILES["file"]["type"] . "<br />";
     //echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
     //echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br />";
-    if (file_exists("storyimg/" . $_FILES["file"]["name"]))//If same file
+        $num = rand(1,1000);
+        $filename = $num.$_FILES["file"]["name"];
+        $image_URL = "storyimg/".$filename;
+    if (file_exists($image_URL))//If same file
       {
       echo "<script>alert('This img already exists!');history.go(-1);</script>";
       }
-    else{
-      $num = rand(1,1000);
-      $filename = $num.$_FILES["file"]["name"];
+    else{      
       move_uploaded_file($_FILES["file"]["tmp_name"], "storyimg/" . $filename);
-      $image_URL = "storyimg/".$filename;//Get img stored URL
       session_start();
       include('Connect.php');//Connect DB
       if($_SESSION['auth']){//Get uid if logged in
@@ -72,7 +72,6 @@ if ((($_FILES["file"]["type"] == "image/gif")
           echo "Somthing ERROR, Try again later";
         }
       }  
-
     }
   }
   }
