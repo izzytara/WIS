@@ -22,7 +22,6 @@
     <script src="js/swiper.js"></script>
 </head>
 <body>
-    
     <!--Here is the home page-->
     <div data-role="page" id="home">
 
@@ -101,6 +100,14 @@
     </div>
     </div>
     <!--Here is the explore page-->
+    <script>
+      $.getJSON("mobile-explore.php",function(result){
+        $.each(result, function(i, field){
+           //$(".diary-display img").attr("src", field.image_URL);
+           $(".show").append("<div class='title'><h3>Title: <span>"+ field.title+ "<p> @ "+ field.location+" Date: "+field.update_time+"</p></span></h3></div><div class='photo'><img class='img-responsive' src=" + field.image_URL + " alt='placeholder'></div><div><p>"+field.story+"</p></div>");
+        });
+      });
+    </script> 
     <div data-role="page" id="explore">
 
         <div data-role="panel" id="panel" data-position="right" data-theme="f" data-display="push">
@@ -123,36 +130,10 @@
             <fieldset>
                 <!--Get All stroies, sorted by popular-->
                 <div id="popular-works" class="container white center">
-                    <div class="diary-display">
-                        <div class="photo">
-                            <img class="img-responsive" src="<?php echo $popular1[image_URL];?>" id="<?php echo $popular1[storyid];?>" alt="placeholder">
-                        </div>
-                        <div class="diary">
-                            <div class="location">
-                                <p>
-                                    <span class="glyphicon glyphicon-map-marker"></span>
-                                    <span><?php echo $popular1[location];?></span>
-                                </p>
-                            </div>                    
-                            <div class="title">
-                                <h2>Title: <span><?php echo $popular1[title];?></span></h2>
-                            </div>
-                            <!--Get author name from uid-->
-                            <?php
-                            $findunamebyuid = "SELECT uname FROM travel_user WHERE uid= '$popular1[uid]'";
-                            $nameres = mysqli_query($connect, $findunamebyuid);
-                            $nameres1 = mysqli_fetch_assoc($nameres);
-                            ?>
-                            <div class="author-date">
-                                <p>By:&nbsp;<span><?php if($nameres1[uname]){echo $nameres1[uname];}elseif($nameres1[uname] == null){echo "****";}?></span>&nbsp;Date: <span><?php echo $popular1[update_time];?></span></p>
-                            </div>
-                    
-                            <div class="text">
-                                <p><?php echo $popular1[story];?></p>
-                            </div>                
-                        </div>                           
+                    <div class="show">
                     </div>
                 </div>
+
             </fieldset>           
         </div>
     </div>
