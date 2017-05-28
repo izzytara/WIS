@@ -30,13 +30,14 @@
         <div class="nav-bar">
             <div class="container">               
                 <div class="top-nav nav" id="myTopnav">
+                    
                     <a class="navbar-brand" href="index.php"><img src="img/LOGO.png" alt="Traval Diary logo"></a>
-                    <a class="left" href="explore.php"><p>EXPLORE</p></a>
-                    <a class="left" href="mytrip.php"><p>MY TRAVEL</p></a>
-                    <a class="left" href="index.php#app"><p>APP</p></a>
-                    <a class="left" href="about.php"><p>ABOUT US</p></a>                   
-                    <a class="right" href="#"><p>LANGUAGE</p></a>
-                        <!--<li class="right"><a href="#"><span class="glyphicon glyphicon-list"></span></a> -->
+                    
+                    <a class="left " href="explore.php"><p class="lang" key="explore">EXPLORE</p></a>
+                    <a class="left " href="mytrip.php"><p class="lang" key="mytravel">MY TRAVEL</p></a>
+                    <a class="left "  href="index.php#app"><p class="lang" key="app">APP</p></a>
+                    <a class="left "  href="about.php"><p class="lang" key="about">ABOUT US</p></a>                   
+                    <a class="right translate" id="cn" href="#"><p class="lang" key="chinese">LANGUAGE</p></a>
                         
                         <!--If user has not loged in-->
                     
@@ -44,12 +45,12 @@
                             session_start();
                             if(!$_SESSION['auth']){
                         ?>                               
-                            <a class="right" href="#" onclick="document.getElementById('userlogin').style.display='block'"><p>LOGIN</p></a>                       
+                            <a class="right" href="#" onclick="document.getElementById('userlogin').style.display='block'"><p class="lang" key="login">LOGIN</p></a>                       
                         <!--If user has not loged in-->
                         <?php
                             }else if($_SESSION['auth']){
                         ?>                                      
-                            <a class="right" href="logout.php"><p>LOGOUT</p></a>                                                                                 
+                            <a class="right" href="logout.php"><p class="lang" key="logout">LOGOUT</p></a>                                                                                 
                         <?php
                             }
                         ?>                                               
@@ -104,10 +105,10 @@
         <form class="design-form" action="upload.php" method="post" enctype="multipart/form-data">
             <div id="step1" class="container green">
                 <div class="design-outside">
-                    <h3 class="tcenter">1. Choose Location</h3>
+                    <h3 class="tcenter lang" key="location">1. Choose Location</h3>
                     <div class="design-inside center">
 
-                        <div class="step-instruct"><p class="tcenter">Please chick you current location from the Google Map</p></div>
+                        <div class="step-instruct"><p class="tcenter lang" key="map">Please chick you current location from the Google Map</p></div>
                         <div id="map" class="design-area"></div>
                         <!--map api-->
                         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAM4uETuyFU5KzjRyn1-aZYy-xnH6jJwzg&callback=myMap" type="text/javascript"></script>
@@ -127,10 +128,10 @@
             
             <div id="step2" class="container white">
                 <div class="design-outside">
-                    <h3 class="tcenter">2. Upload Your Pictures</h3>
+                    <h3 class="tcenter lang" key="upload">2. Upload Your Pictures</h3>
                     <div class="design-inside center">
 
-                        <div class="step-instruct"><p class="tcenter">Please choose your photograph from your mobile or computer</p></div>
+                        <div class="step-instruct"><p class="tcenter lang" key="choose">Please choose your photograph from your mobile or computer</p></div>
 
 
                         <div class="design-area">
@@ -151,13 +152,13 @@
         <!--Here is the third display container-->
             <div id="step3" class="container green">
                 <div class="design-outside">
-                    <h3 class="tcenter">3. My Blog Post</h3>
+                    <h3 class="tcenter lang" key="blog">3. My Blog Post</h3>
                     <div class="design-inside center">
                         <div class="design-area textarea center">
-                            <textarea class="center textarea-small" rows="1" cols="60" name="title"placeholder="Write your title here." required></textarea>
+                            <textarea class="center textarea-small" rows="1" cols="60" name="title" placeholder="Write your title here." required></textarea>
                             <br>
                             <textarea class="center textarea-large" rows="11" cols="60" name="story" placeholder="Write in your journal here." required></textarea>
-                            <p class="tcenter"><button class="btn" type="submit">Done</button></p>
+                            <p class="tcenter"><button class="btn lang" key="done" type="submit">Done</button></p>
                         </div>
 
                     </div>
@@ -179,6 +180,55 @@
                 &copy; Copyright 2017
         </div>
     </div>
+        
+        
+    <!--Here starts to build muli-language translation -->
+    <!-- Add language dictionary with English and Chinese(Simple)-->
+    <script type="text/javascript">
+        var arrLang = {
+            'en': {
+                'explore': 'EXPLORE',
+                'mytravel': 'MY TRAVEL',
+                'app': 'APP',
+                'about': 'ABOUT US',
+                'chinese': 'Language',
+                'login': 'LOGIN',
+                'logout': 'LOGOUT',
+                'location': '1. Choose Location',
+                'map': 'Please chick you current location from the Google Map',
+                'upload': '2. Upload Your Pictures',
+                'choose': 'Please choose your photograph from your mobile or computer',
+                'blog':'3. My Blog Post',
+                'done':'Done'
+            },
+            'cn': {
+                'explore': '探索',
+                'mytravel': '我的日记',
+                'app': '手机APP',
+                'about': '关于我们',
+                'chinese': '中文',
+                'login': '登入',
+                'logout': '登出',
+                'location': '1. 选择您的位置',
+                'map': '请点击谷哥地图确定您的位置',
+                'upload': '2. 上传您的图片',
+                'choose': '请从电脑或手机选择图片并上传',
+                'blog':'3. 我的日记',
+                'done':'完成'
+            }
+        };
+
+        //        Function to achieve lanague swith between English and Simple Chinese(Simple)-->
+        $(function () {
+            $('.translate').click(function () {
+                var lang = $(this).attr('id');
+
+                $('.lang').each(function (index, element) {
+                    $(this).text(arrLang[lang][$(this).attr('key')]);
+                });
+            });
+        });
+    </script>
 
     
 	</body>

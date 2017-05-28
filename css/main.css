@@ -352,7 +352,7 @@
 
     .photo>img{
         width:100%;
-        max-height:35em;    
+        height:35em;    
     }
 
     .diary {
@@ -1124,27 +1124,6 @@ and (orientation: portrait) {
         border-bottom: 2px solid #01b6c6;
     }
     
-    #line-for-timeline:after {
-        content:"";
-        display: inline-block;
-        height: 0.5em;
-        vertical-align: middle;
-        width: 100%;
-        margin-right: -100%;
-        margin-left: 0.75;
-        border-top: 2px solid #01b6c6;
-    }
-    
-    #line-for-timeline:before {
-        content:"";
-        display: inline-block;
-        height: 0.5em;
-        vertical-align: middle;
-        width: 100%;
-        margin-right: 0.75em;
-        margin-left: -100%;
-        border-top: 2px solid #01b6c6;
-    }
 	
 }
 

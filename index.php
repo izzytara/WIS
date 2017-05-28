@@ -17,7 +17,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <!-- Link Bootstrap's js -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- Link Siper's js-->
+    
+    <!-- Link Swiper's js-->
     <script src="js/swiper.js"></script>
 	</head>
 
@@ -29,12 +30,11 @@
             <div class="container">               
                 <div class="top-nav nav" id="myTopnav">
                     <a class="navbar-brand" href="index.php"><img src="img/LOGO.png" alt="Traval Diary logo"></a>
-                    <a class="left" href="explore.php"><p>EXPLORE</p></a>
-                    <a class="left" href="mytrip.php"><p>MY TRAVEL</p></a>
-                    <a class="left" href="#app"><p>APP</p></a>
-                    <a class="left" href="about.php"><p>ABOUT US</p></a>                   
-                    <a class="right" href="#"><p>LANGUAGE</p></a>
-                        <!--<li class="right"><a href="#"><span class="glyphicon glyphicon-list"></span></a> -->
+                    <a class="left " href="explore.php"><p class="lang" key="explore">EXPLORE</p></a>
+                    <a class="left " href="mytrip.php"><p class="lang" key="mytravel">MY TRAVEL</p></a>
+                    <a class="left "  href="#app"><p class="lang" key="app">APP</p></a>
+                    <a class="left "  href="about.php"><p class="lang" key="about">ABOUT US</p></a>                   
+                    <a class="right translate" id="cn" href="#"><p class="lang" key="chinese">LANGUAGE</p></a>
                         
                         <!--If user has not loged in-->
                     
@@ -42,12 +42,12 @@
                             session_start();
                             if(!$_SESSION['auth']){
                         ?>                               
-                            <a class="right" href="#" onclick="document.getElementById('userlogin').style.display='block'"><p>LOGIN</p></a>                       
+                            <a class="right" href="#" onclick="document.getElementById('userlogin').style.display='block'"><p class="lang" key="login">LOGIN</p></a>                       
                         <!--If user has not loged in-->
                         <?php
                             }else if($_SESSION['auth']){
                         ?>                                      
-                            <a class="right" href="logout.php"><p>LOGOUT</p></a>                                                                                 
+                            <a class="right" href="logout.php"><p class="lang" key="logout">LOGOUT</p></a>                                                                                 
                         <?php
                             }
                         ?>                                               
@@ -115,7 +115,7 @@
                </div>
     <!--buttons-->
                 <div class="button center">
-                    <p class="tcenter"><a href="design.php" class="btn"><span id="start-icon" class="glyphicon glyphicon-edit"></span>Start Your Diary</a>
+                    <p class="tcenter"><a href="design.php" class="btn lang" key="start"><span id="start-icon" class="glyphicon glyphicon-edit"></span>Start Your Diary</a>
                     </p>
                 </div>
             </div>
@@ -185,12 +185,12 @@
             </div>
     
     <!--Here is the fourth display container-->
-        <div class="container white">
+            <div class="container white">
                 <p class="tcenter">
                     <img id="app" class="img-responsive center" src="img/advertisinglastpicture.png" alt="app promotion picture"/>
                 </p>
+            </div>
         </div>
-    </div>
     <!--Here is the footer-->
     
         <div class="footer">
@@ -222,6 +222,44 @@
             }
         }
         </script>
+        
+        <!--Here starts to build muli-language translation -->
+    <!-- Add language dictionary with English and Chinese(Simple)-->
+    <script type="text/javascript">
+        var arrLang = {
+            'en': {
+                'explore': 'EXPLORE',
+                'mytravel': 'MY TRAVEL',
+                'app': 'APP',
+                'about': 'ABOUT US',
+                'chinese': 'Language',
+                'login': 'LOGIN',
+                'logout': 'LOGOUT',
+                'start': 'Start Your Diary'
+            },
+            'cn': {
+                'explore': '探索',
+                'mytravel': '我的日记',
+                'app': '手机APP',
+                'about': '关于我们',
+                'chinese': '中文',
+                'login': '登入',
+                'logout': '登出',
+                'start': '开始记录'
+            }
+        };
+
+        // Function to achieve lanague swith between English and Simple Chinese(Simple)-->
+        $(function () {
+            $('.translate').click(function () {
+                var lang = $(this).attr('id');
+
+                $('.lang').each(function (index, element) {
+                    $(this).text(arrLang[lang][$(this).attr('key')]);
+                });
+            });
+        });
+    </script>
 
 	</body>
 </html>
