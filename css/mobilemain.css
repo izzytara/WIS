@@ -355,7 +355,36 @@ and (orientation: portrait) {
     /* --------------------
     Popular works styles
     -----------------------*/
+    .show{
+        border: 1px solid gray;
+        margin: 1.5em 0;
+        width:100%;
+        height: auto;
+    }
     
+    .show img{
+        width: 100%;
+        height: auto;
+        margin: .5em 0;
+    }
+    
+    .show span{
+        margin: 0 0.5em;
+    }
+    
+    .show .mobile-location{
+        float:right;
+    }
+    
+    .show .mobile-date{
+        float:left;
+    }
+    
+    
+    
+    .show p{
+        font-size: 1em;
+    }
 
     #popular-works{   
         height: 15em;
@@ -383,7 +412,7 @@ and (orientation: portrait) {
         display: inline-block;
     }
     .diary h5, p{
-        font-size: 50%;
+        font-size: 80%;
     }
 
     .location {
